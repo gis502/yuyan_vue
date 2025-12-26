@@ -61,6 +61,11 @@ const routes = [
     name: 'Disaster5',
     component: () => import('@/views/disaster/disaster5.vue')
   },
+    {
+        path: '/description',
+        name: 'description',
+        component: () => import('@/views/description.vue'),
+    },
 ]
 export const router = createRouter({
   history: createWebHistory(),

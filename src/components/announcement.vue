@@ -17,6 +17,7 @@
                 <div class="kpzn-title">
                   <a :href="item.link"
                      style="text-decoration: none; color: inherit;"
+                     :style="item.id === 7 ? { cursor: 'pointer' } : {}"
                      @click="handleTitleClick(item, $event)">
                     {{ item.title }}
                   </a>

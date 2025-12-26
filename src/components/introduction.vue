@@ -1,4 +1,5 @@
 <template>
+  <router-link to="/description" class="link-wrapper">
   <div class="introduction-container">
     <div class="title">
       <div class="title-content">
@@ -12,13 +13,21 @@
       <div class="text-data">2025-12-24</div>
     </div>
   </div>
-
+  </router-link>
 </template>
 
 <script setup>
+
 </script>
 
 <style scoped>
+.link-wrapper {
+  text-decoration: none;
+  color: inherit;
+}
+.introduction-container {
+  cursor: pointer;
+}
 .title {
   width: 100%;
   max-width: 1200px;
