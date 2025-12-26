@@ -15,7 +15,11 @@
               <div class="kpzn-list">
                 <img :src="item.image" :alt="item.title" />
                 <div class="kpzn-title">
-                  <a :href="item.link" style="text-decoration: none; color: inherit;">{{ item.title }}</a>
+                  <a :href="item.link"
+                     style="text-decoration: none; color: inherit;"
+                     @click="handleTitleClick(item, $event)">
+                    {{ item.title }}
+                  </a>
                 </div>
               </div>
             </div>
@@ -29,53 +33,72 @@
       </div>
     </div>
   </div>
+
 </template>
 
 <script setup>
 import { ref, onMounted } from 'vue';
 import Swiper from 'swiper/bundle';
 import 'swiper/swiper-bundle.css';
+import img1 from '@/assets/images/27165356xse4.png';
+import img2 from '@/assets/images/27170403yb3g.png'
+import img3 from '@/assets/images/27170729rv7j.png'
+import img4 from '@/assets/images/27171043riea.png'
+import img5 from '@/assets/images/271700338t3d.png'
+import img6 from '@/assets/images/雨燕应急公告封面.png'
+import Notice from "@/views/Notice.vue";
 
 const guideItems = [
   {
     id: 1,
     title: '[台风应对]大暴雨，特大暴雨！"蝴蝶"或将登陆两次！',
     link: 'https://mp.weixin.qq.com/s/WKoDbqWcfB4LhQ6ifbykTw',
-    image: '@/assets/image/27170403yb3g.png'
+    image: img3
   },
   {
     id: 2,
     title: '[台风应对]停航，停业，停运！紧急提醒→',
     link: 'https://mp.weixin.qq.com/s/cbdMiyGuPGz7ZMxINIuzVg',
-    image: '@/assets/image/271700338t3d.png'
+    image: img5
   },
   {
     id: 3,
     title: '[关注预警信号]今年第1号台风要来了！',
     link: 'https://mp.weixin.qq.com/s/1lsx0EiNgOvDAwdm-grcsw',
-    image: '@/assets/image/27165356xse4.png'
+    image: img1
   },
   {
     id: 4,
     title: '[暴雨应对]"七下八上"来了，十要十不要请记牢！',
     link: 'https://mp.weixin.qq.com/s/LESmHI6zI0V6suyfmNT1AA',
-    image: '@/assets/image/span_'
+    image: img3
   },
   {
     id: 5,
     title: '[洪水自救]紧急撤离！！！',
     link: 'https://mp.weixin.qq.com/s/Tx6d51WpigOTKqXtY3DDOw',
-    image: '@/assets/image/27171043riea.png'
+    image: img4
   },
   {
     id: 6,
     title: '[台风暴雨应对]停课！停运！停航！"蝴蝶"即将登陆',
     link: 'https://mp.weixin.qq.com/s/jCeTjgRrnmkUae9WKdeXcQ',
-    image: '@/assets/image/27170729rv7j.png'
+    image: img2
+  },
+  {
+    id: 7,
+    title: '雨燕应急-重大灾害无人机应急合作机制-成员招募公告',
+    image: img6
   }
 ];
 
 const swiperContainer = ref(null);
+const showNotice = ref(false);
+const handleTitleClick = (item, e) => {
+  if (item.id === 7) {
+    showNotice.value = true;
+  }
+};
 
 onMounted(() => {
   // 初始化Swiper

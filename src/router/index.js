@@ -1,44 +1,15 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 
-// 导入组件
-import App from '@/App.vue'
-
-const routes = [
-  {
-    path: '/',
-    name: 'Home',
-    component: App
-  },
-  {
-    path: '/dynamic1',
-    name: 'Dynamic1',
-    component: () => import('@/views/dynamic/dynamic1.vue')
-  },
-  {
-    path: '/dynamic2',
-    name: 'Dynamic2',
-    component: () => import('@/views/dynamic/dynamic2.vue')
-  },
-  {
-    path: '/dynamic3',
-    name: 'Dynamic3',
-    component: () => import('@/views/dynamic/dynamic3.vue')
-  },
-  {
-    path: '/dynamic4',
-    name: 'Dynamic4',
-    component: () => import('@/views/dynamic/dynamic4.vue')
-  },
-  {
-    path: '/dynamic5',
-    name: 'Dynamic5',
-    component: () => import('@/views/dynamic/dynamic5.vue')
-  }
-]
-
-const router = createRouter({
-  history: createWebHistory(),
-  routes
+export const router = createRouter({
+    history: createWebHashHistory(),
+    routes: [
+        {
+            path: '/notice',
+            name: 'notice',
+            component: () => import('@/views/Notice.vue'),
+            meta: {
+                noLoginRequired: true,
+            },
+        },
+    ],
 })
-
-export default router
