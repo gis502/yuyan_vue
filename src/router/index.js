@@ -4,7 +4,7 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: () => import('@/views/home.vue')
+    component: () => import('@/views/Home.vue')
   },
   {
     path: '/dynamic1',
@@ -30,6 +30,11 @@ const routes = [
     path: '/dynamic5',
     name: 'Dynamic5',
     component: () => import('@/views/dynamic/dynamic5.vue')
+  },
+  {
+    path: '/technology/:id',
+    name: 'TechArticle',
+    component: () => import('@/views/frontier/TechnologyPage.vue'),
   },
   {
     path: '/notice',
