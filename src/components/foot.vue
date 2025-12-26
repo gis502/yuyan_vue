@@ -3,8 +3,19 @@
     <div class="footer-info">
       <img src="@/assets/images/logo.png" alt="logo" />
       <div class="footer-text">
-        主办：中华人民共和国应急管理部国家减灾中心（卫星减灾应用中心）
-        京ICP备05086388号-5 京公网安备 11010502037912号
+        <p>
+          <a href="https://www.ndrcc.org.cn/tscl/2812.jhtml">网站声明</a>
+          &nbsp;|&nbsp;
+          <a href="https://www.ndrcc.org.cn/tscl/2811.jhtml">联系我们</a>
+        </p>
+        <p>主办：中华人民共和国应急管理部国家减灾中心（卫星减灾应用中心）</p>
+        <p>地址：北京市朝阳区广百东路6号院 邮编：100124 </p>
+        <p>
+          <a href="http://www.beian.miit.gov.cn/" target="_blank">京ICP备05086388号-5</a>
+          &nbsp;
+          <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502037912" target="_blank">京公网安备
+            11010502037912号</a>
+        </p>
       </div>
     </div>
   </div>
@@ -13,36 +24,32 @@
 <style scoped>
 .footer {
   width: 100%;
-  background: #35609A;
-  height: 100px;
-  display: flex;
-  align-items: center;
+  min-width: 1200px;
 }
 
 .footer-info {
-  width: 1160px;
-  display: flex;
-  justify-content: space-between;
+  width: 1200px;
+  text-align: center;
   margin: 0 auto;
+  padding: 40px 120px 60px;
+  overflow: hidden;
 }
 
-.footer-info img {
+.footer-info img{
   width: 64px;
   height: 69px;
 }
 
 .footer-text {
-  font-family: PingFangSC, PingFang SC;
-  font-size: 18px;
-  font-weight: 500;
-  color: #FFFFFF;
-  line-height: 25px;
-  margin-top: 22px;
+  font-size: 16px;
+  width: 800px;
+  line-height: 26px;
+  float: left;
 }
 
-@media (max-width: 1200px) {
-  .footer-info {
-    width: 90%;
-  }
+.footer-text a {
+  color: #FFFFFF;
+  text-decoration:  none;
 }
+
 </style>
