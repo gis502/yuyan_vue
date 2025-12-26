@@ -46,7 +46,7 @@ import img3 from '@/assets/images/27170729rv7j.png'
 import img4 from '@/assets/images/27171043riea.png'
 import img5 from '@/assets/images/271700338t3d.png'
 import img6 from '@/assets/images/雨燕应急公告封面.png'
-import Notice from "@/views/Notice.vue";
+import {router} from "@/router/index.js";
 
 const guideItems = [
   {
@@ -93,10 +93,9 @@ const guideItems = [
 ];
 
 const swiperContainer = ref(null);
-const showNotice = ref(false);
 const handleTitleClick = (item, e) => {
   if (item.id === 7) {
-    showNotice.value = true;
+    router.push('/notice');
   }
 };
 

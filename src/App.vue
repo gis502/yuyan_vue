@@ -1,4 +1,5 @@
 <template>
+  <router-view></router-view>
   <div class="index">
     <div class="banner"></div>
     <div class="middle-container">
