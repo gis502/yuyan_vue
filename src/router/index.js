@@ -36,6 +36,11 @@ const routes = [
     name: 'notice',
     component: () => import('@/views/Notice.vue'),
   },
+  {
+    path: '/description',
+    name: 'description',
+    component: () => import('@/views/description.vue'),
+  },
 ]
 export const router = createRouter({
   history: createWebHistory(),
