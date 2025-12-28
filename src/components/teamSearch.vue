@@ -486,7 +486,7 @@ watch(searchKey, (newVal) => {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  height: 400px;
+  height: 360px;
   overflow: hidden;
   background: #FFFFFF;
   border-radius: 12px;

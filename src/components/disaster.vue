@@ -38,7 +38,6 @@
           <p class="time">2025-05-26 18:19</p>
         </li>
       </ul>
-      <div class="disaster-more">查看更多</div>
     </div>
   </div>
 </template>
@@ -87,13 +86,14 @@
   overflow: hidden;
   list-style: none; /* 添加这行，移除列表标记 */
   padding-left: 0;  /* 添加这行，移除默认左边距 */
+  display: flex;
+  gap: 10px;
 }
 
 .disaster-map .map{
   float: left;
-  width: 23%;
   height: 280px;
-  margin-left: 1%;
+  flex: 1;
   margin-bottom: 15px;
 }
 
@@ -121,11 +121,5 @@
   font-size: 12px;
   color: #999999;
   margin-bottom: 0;
-}
-
-.disaster-more{
-  color: #999999;
-  position: absolute;
-  right: 20%;
 }
 </style>

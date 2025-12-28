@@ -33,9 +33,9 @@
         <a href="/dynamic5" target="_blank">国家减灾中心派员参加2025第九届世界无人机大会暨UASE无人机展</a>
         <div class="dynamics-date">2025-05-30</div>
       </div>
-      <div class="dynamics-item">
-        <div class="dynamics-date">查看更多</div>
-      </div>
+<!--      <div class="dynamics-item">-->
+<!--        <div class="dynamics-date">查看更多</div>-->
+<!--      </div>-->
     </div>
   </div>
 </template>
@@ -76,9 +76,8 @@
 }
 
 .dynamics-list {
-  width: 80%;
+  width: 100%;
   margin-top: 32px;
-  margin-left: 100px;
 }
 
 .dynamics-item {
