@@ -16,7 +16,25 @@ import "@vue-office/docx/lib/index.css";
 import Foot from "@/components/foot.vue";
 
 const docxUrl = `/docx/机制动态/20250109-“重大灾害无人机应急合作机制”业务交流和技术研讨会在哈尔滨召开.docx`
+const renderedHandler = () => {
+  console.log("文档渲染完成，开始修改图片样式");
+  // 获取docx容器内的所有图片标签【只选图片，精准无遗漏】
+  const imgList = document.querySelectorAll('.docx img')
+  // 遍历每一张图片，只修改它的父级div
+  imgList.forEach(img => {
+    const imgParentDiv = img.closest('div')
+    if(imgParentDiv){
+      imgParentDiv.style.width = '100%' 
+      imgParentDiv.style.height = 'auto' 
+      imgParentDiv.style.display = 'block'
+      imgParentDiv.style.margin = '0 auto'
+      imgParentDiv.style.textIndent = '0' 
+    }
 
+    img.style.width = '100%'
+    img.style.height = 'auto'
+  })
+};
 </script>
 
 <style scoped>

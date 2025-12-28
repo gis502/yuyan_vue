@@ -1,52 +1,60 @@
 <template>
-  <div class="page-container">
-    <DocumentTemplate
-        :title="docTitle"
-        :subtitle="docSubtitle"
-        :meta="docMeta"
-        :content="htmlContent"
-        :title-align="'center'"
-    >
-    </DocumentTemplate>
+  <div style="width: 100%; margin: 0; padding: 20px; overflow: auto; min-height: 100vh;box-sizing: border-box;background: #f5f7fa">
+    <vue-office-docx
+      :src="docxUrl"
+      @rendered="renderedHandler"
+      @error="errorHandler"
+      style="width: 100%;"
+    />
+    <Foot />
   </div>
 </template>
 
 <script setup>
-import {ref} from 'vue';
-import DocumentTemplate from "@/components/template.vue";
+import VueOfficeDocx from "@vue-office/docx";
+import "@vue-office/docx/lib/index.css";
+import Foot from "@/components/foot.vue";
 
-// 使用 ref 定义响应式数据
-const docTitle = ref('"雨燕应急"2025首期线上培训圆满完成 684名无人机应急尖兵云端集结');
-const docSubtitle = ref('');
-const docMeta = ref('4月26日');
+const docxUrl = `/docx/机制动态/20250426-机制动态：“雨燕应急”2025首期线上培训圆满完成，684名无人机应急尖兵云端集结.docx`
+const renderedHandler = () => {
+  console.log("文档渲染完成，开始修改图片样式");
+  // 获取docx容器内的所有图片标签【只选图片，精准无遗漏】
+  const imgList = document.querySelectorAll('.docx img')
+  // 遍历每一张图片，只修改它的父级div
+  imgList.forEach(img => {
+    const imgParentDiv = img.closest('div')
+    if(imgParentDiv){
+      imgParentDiv.style.width = '100%' 
+      imgParentDiv.style.height = 'auto' 
+      imgParentDiv.style.display = 'block'
+      imgParentDiv.style.margin = '0 auto'
+      imgParentDiv.style.textIndent = '0' 
+    }
 
-// HTML 内容
-const htmlContent = ref(`
-  <p>4月24日下午，应急管理部国家减灾中心在京组织召开了"雨燕应急"2025首期线上培训，聚焦"重大灾害无人机应急合作机制"，旨在强化机制成员灾害应急应对能力。</p>
-
-  <p>此次培训共有220家机制成员单位的684名联络人和一线飞手线上参会，大疆应急行业负责人耿京乐、北京飞马遥测公司杨建华、河南省防灾减灾中心周永春共3名专家受邀在国家减灾中心现场参会。</p>
-
-  <p>国家减灾中心航空遥感应用部王薇主任、李苓苓和杨坤3名同志分别就机制制度、日常管理和应急响应进行了详细讲解，参培人员和专家围绕机制制度规范、工作执行等关键问题展开了交流。</p>
-
-  <h3>培训成效</h3>
-
-  <p>通过培训，增进了机制成员单位联络人和一线飞手对机制运行和应急管理工作的了解，为机制成员单位平战结合，日常开展能力建设、灾害预警等应急准备工作，和在灾害场景下安全、高效、有序执行应急任务提供了明确指导。</p>
-
-  <div class="image-container">
-    <img src="/images/dynamic/dynamic4-1.png" alt="培训会议截屏" />
-    <div class="image-caption">培训会议现场截屏</div>
-  </div>
-
-  <div class="image-container">
-    <img src="/images/dynamic/dynamic4-2.png" alt="线上培训界面" />
-    <div class="image-caption">线上培训平台界面</div>
-  </div>
-`);
+    img.style.width = '100%'
+    img.style.height = 'auto'
+  })
+};
 </script>
 
 <style scoped>
-.page-container {
-  background-color: #f5f7fa;
-  min-height: 100vh;
+:deep(.docx-wrapper) {
+  background: #FFF !important;
+  padding: 0 !important;
+}
+:deep(.docx) {
+  width: 98% !important;
+  box-shadow: none !important;
+}
+
+:deep(.docx-wrapper) {
+  overflow: visible !important;
+  height: auto !important;   
+}
+
+:deep(.docx) {
+  height: auto !important;
+  min-height: auto !important;
+  padding: 20px !important;
 }
 </style>

@@ -17,14 +17,14 @@
           <div class="technology-item-info">
             <!-- 查看：仅展示，无交互 -->
             <div class="technology-item-watch">
-              <img src="@/assets/images/technology/查看.png" />
+              <img src="/images/technology/查看.png" />
               {{ item.watch }}
             </div>
 
             <!-- 点赞：点击切换选中状态 + 数量变化 -->
             <div class="technology-item-like" @click="handleLike(index)">
               <img
-                src="@/assets/images/technology/点赞.png"
+                src="/images/technology/点赞.png"
                 :class="{ active: item.likeActive }"
               />
               {{ item.like }}
@@ -32,7 +32,7 @@
 
             <!-- 转发：点击提示 + 数量+1 -->
             <div class="technology-item-forward" @click="handleForward(index)">
-              <img src="@/assets/images/technology/转发.png" />
+              <img src="/images/technology/转发.png" />
               {{ item.forward }}
             </div>
 
@@ -42,7 +42,7 @@
               @click="handleCollection(index)"
             >
               <img
-                src="@/assets/images/technology/收藏.png"
+                src="/images/technology/收藏.png"
                 :class="{ active: item.collectionActive }"
               />
               {{ item.collection }}
@@ -53,7 +53,7 @@
               class="technology-item-comment"
               @click="showCommentInput = index"
             >
-              <img src="@/assets/images/technology/评论.png" />
+              <img src="/images/technology/评论.png" />
               {{ item.comment }}
             </div>
 
@@ -87,7 +87,7 @@ import { ref } from 'vue'
 
 const list = ref([
     {
-        img: '/src/assets/images/technology/1.png',
+        img: '/images/technology/1.png',
         title: '20250103-技术前沿：远程无人机洪灾应急信息全自主感知',
         watch: 0,
         like: 0,
@@ -98,7 +98,7 @@ const list = ref([
         comment: 0
     },
     {
-        img: '/src/assets/images/technology/2.png',
+        img: '/images/technology/2.png',
         title: '20250106-技术前沿：基于道路中心线的分阶段弱监督遥感图像道路提取',
         watch: 0,
         like: 0,
@@ -109,7 +109,7 @@ const list = ref([
         comment: 0
     },
     {
-        img: '/src/assets/images/technology/3.png',
+        img: '/images/technology/3.png',
         title: '20250125-技术前沿：高分辨率遥感影像复杂目标检测技术及减灾应用-推文',
         watch: 0,
         like: 0,
@@ -120,7 +120,7 @@ const list = ref([
         comment: 0
     },
     {
-        img: '/src/assets/images/technology/4.png',
+        img: '/images/technology/4.png',
         title: '20250224-技术前沿：基于多模遥感图像和相关知识的建筑结构类型识别技术',
         watch: 0,
         like: 0,
@@ -131,7 +131,7 @@ const list = ref([
         comment: 0
     },
     {
-        img: '/src/assets/images/technology/5.png',
+        img: '/images/technology/5.png',
         title: '20250515-技术前沿：基于双时相场景变化检测的弱监督灾后建筑物损毁遥感判识技术',
         watch: 0,
         like: 0,
