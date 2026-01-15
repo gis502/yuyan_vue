@@ -2,6 +2,8 @@
   <div class="footer">
     <div class="footer-info">
       <img src="@/assets/images/logo.png" alt="logo" />
+      <img src="@/assets/images/yuyan.png" alt="yuyan" />
+      <img src="@/assets/images/yuyanlink.jpg" alt="link" />
       <div class="footer-text">
         <p>
           <a href="https://www.ndrcc.org.cn/tscl/2812.jhtml">网站声明</a>

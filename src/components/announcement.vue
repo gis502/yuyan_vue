@@ -13,7 +13,7 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide" v-for="item in guideItems" :key="item.id">
               <div class="kpzn-list">
-                <img :src="item.image" :alt="item.title" />
+<!--                <img :src="item.image" :alt="item.title" />-->
                 <div class="kpzn-title">
                   <a :href="item.link"
                      style="text-decoration: none; color: inherit;"
@@ -52,37 +52,45 @@ import {router} from "@/router/index.js";
 const guideItems = [
   {
     id: 1,
-    title: '[台风应对]大暴雨，特大暴雨！"蝴蝶"或将登陆两次！',
+    title: '今年第1号台风“蝴蝶”（热带风暴级）的中心今天（12日）上午9点钟位于海南省三亚市东南方向',
     link: 'https://mp.weixin.qq.com/s/WKoDbqWcfB4LhQ6ifbykTw',
     image: img3
   },
   {
     id: 2,
-    title: '[台风应对]停航，停业，停运！紧急提醒→',
+    title: '据三亚市旅文局消息，根据《三亚市防灾减灾救灾和安全生产委员会关于启动防汛防风Ⅳ级应急响应的通知》',
     link: 'https://mp.weixin.qq.com/s/cbdMiyGuPGz7ZMxINIuzVg',
     image: img5
   },
   {
     id: 3,
-    title: '[关注预警信号]今年第1号台风要来了！',
+    title: '中央气象台消息\n' +
+        '\n' +
+        '今年南海热带扰动\n' +
+        '\n' +
+        '或将于明天（6月11日）前后\n' +
+        '\n' +
+        '加强为\n' +
+        '\n' +
+        '今年第1号台风“蝴蝶',
     link: 'https://mp.weixin.qq.com/s/1lsx0EiNgOvDAwdm-grcsw',
     image: img1
   },
   {
     id: 4,
-    title: '[暴雨应对]"七下八上"来了，十要十不要请记牢！',
+    title: '6月18日，湖南龙山县普降大暴雨。6月19日，位于城区的龙领国际小区，有4人前往地下车库挪车后失联',
     link: 'https://mp.weixin.qq.com/s/LESmHI6zI0V6suyfmNT1AA',
     image: img3
   },
   {
     id: 5,
-    title: '[洪水自救]紧急撤离！！！',
+    title: '受持续强降雨及上游来水叠加影响，我县防汛形势异常严峻',
     link: 'https://mp.weixin.qq.com/s/Tx6d51WpigOTKqXtY3DDOw',
     image: img4
   },
   {
     id: 6,
-    title: '[台风暴雨应对]停课！停运！停航！"蝴蝶"即将登陆',
+    title: '大风预报：6月13日14时至14日14时，南海大部、北部湾、琼州海峡、西沙群岛、南沙群岛、中沙群岛、',
     link: 'https://mp.weixin.qq.com/s/jCeTjgRrnmkUae9WKdeXcQ',
     image: img2
   },
@@ -139,7 +147,7 @@ onMounted(() => {
 
 .swiper-container {
   width: 100%;
-  height: 350px;
+  height: 200px;
   padding-bottom: 50px;
   position: relative;
   overflow: hidden;
@@ -156,6 +164,7 @@ onMounted(() => {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: auto;
 }
 
 .swiper-pagination {
@@ -188,6 +197,33 @@ onMounted(() => {
   left: 10px;
 }
 
+.kpzn-list {
+  width: 332px;
+  height: 136px;
+  background: linear-gradient(180deg, #EDF5FF 0%, #FFFFFF 69%, #FFFFFF 100%);
+  box-shadow: 0px 10px 20px 0px rgba(121, 152, 201, 0.15);
+  border-radius: 8px;
+  border: 2px solid #FFFFFF;
+  padding: 23px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* 确保文字不溢出 */
+  overflow: hidden;
+}
+
+.kpzn-title {
+  font-size: 18px;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  word-break: break-word;
+}
+
 .kpzn-list img {
   width: 100%;
   height: 213px;
@@ -199,6 +235,7 @@ onMounted(() => {
   .swiper-container {
     width: 100%;
     height: auto;
+    padding-bottom: 60px;
   }
 
   .swiper-wrapper {
@@ -209,6 +246,8 @@ onMounted(() => {
 
   .kpzn-list {
     width: 100%;
+    max-width: 332px;
+    height: 136px;
   }
 }
 
@@ -217,8 +256,14 @@ onMounted(() => {
     height: auto;
   }
 
+  .swiper-slide {
+    /* 小屏幕只显示1个slide */
+    width: 100% !important;
+  }
+
   .kpzn-list {
-    width: 100%;
+    font-size: 16px;
+    height: 72px;
   }
 }
 </style>
