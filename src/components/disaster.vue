@@ -39,6 +39,9 @@
         </li>
       </ul>
     </div>
+    <div class="disaster-item">
+      <a href="/moreInfo/disaster" class="disaster-date">查看更多</a>
+    </div>
   </div>
 </template>
 
@@ -121,5 +124,28 @@
   font-size: 12px;
   color: #999999;
   margin-bottom: 0;
+}
+
+.disaster-item {
+  font-size: 16px;
+  line-height: 22px;
+  display: flex;
+  position: relative;
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.disaster-item a {
+  display: inline-block;
+  padding: 5px;
+  text-decoration: none;
+  color: #333;
+  transition: background-color 0.3s;
+  margin-left: auto;
+}
+
+.disaster-item a:hover {
+  background-color: #f5f5f5;
+  color: #3F93DA;
 }
 </style>
