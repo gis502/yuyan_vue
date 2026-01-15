@@ -10,12 +10,12 @@
     <!-- 搜索框区域 -->
     <div class="search-box-container">
       <el-input
-        v-model="searchKey"
-        placeholder="请输入单位名称关键词搜索..."
-        class="search-input"
-        @input="handleSearch"
-        clearable
-        prefix-icon="el-icon-search"
+          v-model="searchKey"
+          placeholder="请输入单位名称关键词搜索..."
+          class="search-input"
+          @input="handleSearch"
+          clearable
+          prefix-icon="el-icon-search"
       />
     </div>
 
@@ -28,9 +28,9 @@
         </div>
         <div class="result-content">
           <div
-            class="team-item"
-            v-for="(item, index) in searchResult"
-            :key="index"
+              class="team-item"
+              v-for="(item, index) in searchResult"
+              :key="index"
           >
             <span class="team-name">{{ item.name }}</span>
             <span class="team-region">{{ item.region }}</span>
@@ -46,9 +46,9 @@
       <!-- 动态滚动列表（搜索框为空时显示） -->
       <div v-else class="scroll-list">
         <div
-          class="team-item"
-          v-for="(item, index) in allTeams"
-          :key="index"
+            class="team-item"
+            v-for="(item, index) in allTeams"
+            :key="index"
         >
           <span class="team-name">{{ item.name }}</span>
           <span class="team-region">{{ item.region }}</span>
@@ -363,9 +363,9 @@ const handleSearch = () => {
   // 模糊匹配：不区分大小写，匹配单位名称或所属地区
   const key = searchKey.value.trim().toLowerCase();
   searchResult.value = allTeams.value.filter(
-    item =>
-      item.name.toLowerCase().includes(key) ||
-      item.region.toLowerCase().includes(key)
+      item =>
+          item.name.toLowerCase().includes(key) ||
+          item.region.toLowerCase().includes(key)
   );
 };
 
@@ -461,17 +461,14 @@ watch(searchKey, (newVal) => {
 
 /* 搜索框样式 */
 .search-box-container {
-  width: 100%;
-  max-width: 800px;
+  width: 80%;
   margin: 0 auto 40px;
 }
 
 .search-input {
   height: 48px;
   font-size: 16px;
-  border-radius: 24px;
-  border: 1px solid #E5E7EB;
-  padding: 0 20px;
+  border-radius: 50px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
 }
