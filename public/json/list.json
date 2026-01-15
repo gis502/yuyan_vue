@@ -1,11 +1,140 @@
 {
   "notice": [
     {
+      "title": "雨燕应急重大灾害无人机应急合作机制成员招募公告",
+      "time": "2025-12-18 15:29",
+      "router": {
+        "name": "notice",
+        "params": {}
+      }
+    }
+  ],
+  "dynamic": [
+    {
+      "title": "“重大灾害无人机应急合作机制”业务交流和技术研讨会在哈尔滨召开",
+      "time": "2025-02-10 10：08",
+      "router": {
+        "name": "dynamic1",
+        "params": {}
+      }
+    },
+    {
+      "title": "“重大灾害无人机应急合作机制”2025年考核和增补工作圆满完成",
+      "time": "2025-03-07 16：20",
+      "router": {
+        "name": "dynamic2",
+        "params": {}
+      }
+    },
+    {
+      "title": "【机制动态】聚青年英才之力 筑无人机应急防线",
+      "time": "",
+      "router": {
+        "name": "dynamic3",
+        "params": {}
+      }
+    },
+    {
+      "title": "“雨燕应急”2025首期线上培训圆满完成   684名无人机应急尖兵云端集结",
+      "time": "",
+      "router": {
+        "name": "dynamic4",
+        "params": {}
+      }
+    },
+    {
+      "title": "国家减灾中心派员参加2025第九届世界无人机大会暨UASE无人机展",
+      "time": "",
+      "router": {
+        "name": "dynamic5",
+        "params": {}
+      }
+    }
+  ],
+  "emergency": [
+    {
+      "title": "灾害应急：西藏定日6.8级地震应急监测评估",
+      "time": "",
+      "router": {
+        "name": "disaster1",
+        "params": {}
+      }
+    },
+    {
+      "title": "灾害应急：四川筠连山体滑坡应急监测评估",
+      "time": "",
+      "router": {
+        "name": "disaster2",
+        "params": {}
+      }
+    },
+    {
+      "title": "灾害应急：云南福贡县亚目水电站滑坡应急监测",
+      "time": "",
+      "router": {
+        "name": "disaster3",
+        "params": {}
+      }
+    },
+    {
+      "title": "灾害应急：贵州大方县果瓦乡山体滑坡无人机应急监测",
+      "time": "",
+      "router": {
+        "name": "disaster4",
+        "params": {}
+      }
+    }
+  ],
+  "trends": [
+    {
       "title": "",
       "time": "",
       "router": {
         "name": "",
         "params": {}
+      }
+    }
+  ],
+
+  "technology": [
+    {
+      "title": "远程无人机洪灾应急信息全自主感知技术",
+      "time": "",
+      "router": {
+        "name": "TechArticle",
+        "params": {"id": 1}
+      }
+    },
+    {
+      "title": "《北邮学报》基于道路中心线的分阶段弱监督遥感图像道路提取",
+      "time": "",
+      "router": {
+        "name": "TechArticle",
+        "params": {"id": 2}
+      }
+    },
+    {
+      "title": "高分辨率遥感影像复杂目标检测技术及减灾应用",
+      "time": "",
+      "router": {
+        "name": "TechArticle",
+        "params": {"id": 3}
+      }
+    },
+    {
+      "title": "基于多模遥感图像和相关知识的建筑结构类型识别技术",
+      "time": "",
+      "router": {
+        "name": "TechArticle",
+        "params": {"id": 4}
+      }
+    },
+    {
+      "title": "【技术前沿】基于双时相场景变化检测的弱监督灾后建筑物损毁遥感判识技术",
+      "time": "",
+      "router": {
+        "name": "TechArticle",
+        "params": {"id": 5}
       }
     }
   ]
