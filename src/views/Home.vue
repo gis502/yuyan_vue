@@ -8,8 +8,8 @@
       <div class="banner-maker">应急管理部国家减灾中心制作</div>
     </div>
     <div class="middle-container">
-      <AnnouncementComponent />
       <IntroductionComponent />
+      <AnnouncementComponent />
       <DynamicsComponent />
       <DisasterComponent />
       <LocalDynamicsComponent />

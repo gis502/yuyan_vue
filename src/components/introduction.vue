@@ -1,10 +1,5 @@
 <template>
   <div class="introduction-container">
-    <div class="title">
-      <div class="title-content">
-        <span class="title-span">机制<span class="title-blue">介绍</span></span>
-      </div>
-    </div>
     <div class="text">
       <a href="/description" target="_blank">
         <div class="text-content">
@@ -55,8 +50,8 @@
   color: #3F93DA;
 }
 .text{
-  width: 530px;
-  height: 400px;
+  width: 199%;
+  height: 200px;
   background: linear-gradient(180deg, #EDF5FF 0%, #FFFFFF 69%, #FFFFFF 100%);
   box-shadow: 0px 10px 20px 0px rgba(121, 152, 201, 0.15);
   border-radius: 8px;
@@ -64,16 +59,15 @@
   padding: 23px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  margin-left: 352px;
 }
 .text-content{
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
   line-height: 2.5em;
 }
-.text-data{
-  font-size: 14px;
-  color: #666666;
-  line-height: 20px;
-}
+
 </style>
