@@ -1,26 +1,25 @@
 <template>
-  <div class="technical-container">
+  <div class="local-container">
     <div class="title">
       <div class="title-content">
         <img src="@/assets/images/titleLeft.png" alt="title left" />
         <span class="title-span"
-          >技术<span class="title-blue">前沿</span></span
+        >地方<span class="title-blue">动态</span></span
         >
         <img src="@/assets/images/titleRight.png" alt="title right" />
       </div>
     </div>
     <div class="list">
-        <FrontierOfEquipmentTechnology />
-      </div>
+
+    </div>
   </div>
 </template>
 
 <script setup>
-import FrontierOfEquipmentTechnology from "./frontier/FrontierOfEquipmentTechnology.vue";
 </script>
 
 <style scoped>
-.technical-container {
+.local-container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto 32px auto;

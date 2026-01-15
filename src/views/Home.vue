@@ -8,13 +8,12 @@
     </div>
     <div class="middle-container">
       <AnnouncementComponent />
-      <div class="container-split">
-        <IntroductionComponent />
-        <TeamSearchComponent />
-      </div>
+      <IntroductionComponent />
       <DynamicsComponent />
       <DisasterComponent />
+      <LocalDynamicsComponent />
       <TechnicalComponent />
+      <TeamSearchComponent />
     </div>
     <foot />
   </div>
@@ -29,6 +28,8 @@ import DynamicsComponent from "@/components/dynamics.vue";
 import TechnicalComponent from "@/components/technical.vue";
 import TeamSearchComponent from "@/components/teamSearch.vue";
 import AnnouncementComponent from "@/components/announcement.vue";
+import LocalDynamicsComponent from "@/components/LocalDynamicsComponent.vue";
+
 </script>
 
 <style scoped>
@@ -115,29 +116,5 @@ import AnnouncementComponent from "@/components/announcement.vue";
 
 .team-search-container {
   width: 100%;
-}
-
-/* 容器分割样式 */
-.container-split {
-  width: 100%;
-  max-width: 1200px;
-  margin: 56px auto 80px auto;
-  display: flex;
-  justify-content: space-between;
-}
-
-/* 响应式调整 */
-@media (max-width: 1200px) {
-  .container-split {
-    width: 90%;
-    max-width: none;
-    flex-direction: column;
-    gap: 50px;
-  }
-
-  .introduction-container, .team-search-container {
-    width: 100%;
-    max-width: 100%;
-  }
 }
 </style>
