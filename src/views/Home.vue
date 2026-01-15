@@ -5,10 +5,11 @@
         <div class="title-line1">雨燕应急</div>
         <div class="title-line2">重大灾害无人机应急合作机制</div>
       </div>
+      <div class="banner-maker">应急管理部国家减灾中心制作</div>
     </div>
     <div class="middle-container">
-      <AnnouncementComponent />
       <IntroductionComponent />
+      <AnnouncementComponent />
       <DynamicsComponent />
       <DisasterComponent />
       <LocalDynamicsComponent />
@@ -47,7 +48,7 @@ import LocalDynamicsComponent from "@/components/LocalDynamicsComponent.vue";
   width: 100%;
   height: 700px;
   margin-bottom: 80px;
-  background: url("@/assets/images/banner.png") center top no-repeat;
+  background: url("@/assets/images/banner1.jpg") center top no-repeat;
   background-size: 100% 100%;
   position: relative;
 }
@@ -65,6 +66,19 @@ import LocalDynamicsComponent from "@/components/LocalDynamicsComponent.vue";
   width: 100%;
 }
 
+.banner-maker {
+  position: absolute;
+  bottom: 24px;
+  right: 40px;
+  font-size: 18px;
+  color: #9b683e;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 6px 12px;
+  transform: skewX(-15deg);
+  display: inline-block;
+  font-family: "Microsoft Yahei", sans-serif;
+}
 
 .title-line1 {
   font-size: 72px;
