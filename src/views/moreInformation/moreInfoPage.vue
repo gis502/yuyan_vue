@@ -12,6 +12,7 @@
           :page-title="pageTitle"
           :news-list="currentList"
           :page-size="pageSize"
+          :highlight-keyword="keyword"
           :show-pagination= false
       />
     </div>
@@ -40,10 +41,22 @@ const allLists = ref({}); // 存储所有列表数据
 
 // 从路由参数获取 id
 const listId = computed(() => route.params.id);
+const keyword = computed(() => route.query.keyword || '');
+const isSearchPage = computed(() => listId.value === 'search');
 
 // 当前显示的列表
 const currentList = computed(() => {
-  if (allLists.value && listId.value) {
+  if (allLists.value) {
+    // 3.1 搜索页面：根据keyword筛选所有数据中的匹配内容
+    if (isSearchPage.value) {
+      if (!keyword.value) return null; // 无关键词则返回空
+      // 合并所有列表数据，然后筛选包含关键词的项（按需调整筛选规则）
+      const allData = Object.values(allLists.value).flat(); // 把所有列表合并成一维数组
+      return allData.filter(item => {
+        return item.title?.toLowerCase().includes(keyword.value.toLowerCase());
+      });
+    }
+    // 3.2 普通页面：按listId加载指定列表
     return allLists.value[listId.value] || null;
   }
   return null;
@@ -51,6 +64,9 @@ const currentList = computed(() => {
 
 // 页面标题（根据 id 生成）
 const pageTitle = computed(() => {
+  if (isSearchPage.value) {
+    return `搜索结果：${keyword.value || '无关键词'}`;
+  }
   const titleMap = {
     'disaster': '灾害应急',
     'technology': '技术前沿',
