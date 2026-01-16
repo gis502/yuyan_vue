@@ -101,15 +101,10 @@ import Search from "@//components/Search.vue"
   width: 100%;
 }
 
-.announcement-container, .dynamics-container, .disaster-container, .technical-container, .local-dynamics-container {
+.announcement-container, .dynamics-container, .disaster-container, .technical-container, .local-dynamics-container, .introduction-container{
   width: 100%;
   max-width: 1200px;
   margin: 0 auto 32px auto;
-}
-
-.introduction-container {
-  width: 100%;
-  max-width: 580px;
 }
 
 .team-search-container {
