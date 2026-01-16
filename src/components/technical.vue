@@ -11,7 +11,10 @@
     </div>
     <div class="list">
         <FrontierOfEquipmentTechnology />
-      </div>
+    </div>
+    <div class="tech-item">
+      <a href="/moreInfo/technology" class="tech-date">查看更多</a>
+    </div>
   </div>
 </template>
 
@@ -57,5 +60,29 @@ import FrontierOfEquipmentTechnology from "./frontier/FrontierOfEquipmentTechnol
 }
 .list {
   margin-top: 20px;
+}
+
+
+.tech-item {
+  font-size: 16px;
+  line-height: 22px;
+  display: flex;
+  position: relative;
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.tech-item a {
+  display: inline-block;
+  padding: 5px;
+  text-decoration: none;
+  color: #333;
+  transition: background-color 0.3s;
+  margin-left: auto;
+}
+
+.tech-item a:hover {
+  background-color: #f5f5f5;
+  color: #3F93DA;
 }
 </style>

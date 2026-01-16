@@ -8,6 +8,7 @@
       <div class="banner-maker">应急管理部国家减灾中心制作</div>
     </div>
     <div class="middle-container">
+      <Search />
       <IntroductionComponent />
       <AnnouncementComponent />
       <DynamicsComponent />
@@ -30,6 +31,7 @@ import TechnicalComponent from "@/components/technical.vue";
 import TeamSearchComponent from "@/components/teamSearch.vue";
 import AnnouncementComponent from "@/components/announcement.vue";
 import LocalDynamicsComponent from "@/components/LocalDynamicsComponent.vue";
+import Search from "@//components/Search.vue"
 
 </script>
 
@@ -99,15 +101,10 @@ import LocalDynamicsComponent from "@/components/LocalDynamicsComponent.vue";
   width: 100%;
 }
 
-.announcement-container, .dynamics-container, .disaster-container, .technical-container, .local-dynamics-container {
+.announcement-container, .dynamics-container, .disaster-container, .technical-container, .local-dynamics-container, .introduction-container{
   width: 100%;
   max-width: 1200px;
   margin: 0 auto 32px auto;
-}
-
-.introduction-container {
-  width: 100%;
-  max-width: 580px;
 }
 
 .team-search-container {

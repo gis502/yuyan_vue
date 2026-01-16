@@ -50,7 +50,7 @@
   color: #3F93DA;
 }
 .text{
-  width: 199%;
+  width: 100%;
   height: 200px;
   background: linear-gradient(180deg, #EDF5FF 0%, #FFFFFF 69%, #FFFFFF 100%);
   box-shadow: 0px 10px 20px 0px rgba(121, 152, 201, 0.15);
@@ -62,7 +62,7 @@
   justify-content: center;
   align-items: center;
   text-align: left;
-  margin-left: 352px;
+
 }
 .text-content{
   font-size: 18px;
