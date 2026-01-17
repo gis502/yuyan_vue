@@ -135,9 +135,8 @@ const errorHandler = (error) => {
 
 /* 内容区域（右侧留白为左侧两倍） */
 .document-content {
-  width: 700pt;
-  /* 左侧留白：2.5% 右侧留白：5%（右侧为左侧的两倍） */
-  padding: 20px 5% 20px 2.5%;
+  width: 800pt;
+  padding: 20px;
   background: #fff;
   border: 1px solid #eeeeee;
   min-height: 80vh;
@@ -146,20 +145,6 @@ const errorHandler = (error) => {
   margin-left: 150pt;
 }
 
-/* 另一种实现方式：使用固定值的不对称留白 */
-/*
-.document-content {
-  width: 100%;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 20px 80px 20px 40px;
-  background: #fff;
-  border: 1px solid #eeeeee;
-  min-height: 80vh;
-  position: relative;
-  box-sizing: border-box;
-}
-*/
 
 /* 面包屑容器 */
 .breadcrumb-container {
@@ -240,7 +225,7 @@ const errorHandler = (error) => {
 }
 
 :deep(.docx) {
-  width: 600pt !important;
+  width: 700pt !important;
   box-shadow: none !important;
   padding: 20px !important;
   height: auto !important;
