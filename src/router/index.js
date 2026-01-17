@@ -75,6 +75,11 @@ const routes = [
     path: '/moreInfo/:id',
     name: 'more',
     component: () => import('@/views/moreInformation/moreInfoPage.vue'),
+  },
+  {
+    path: '/moreOa',
+    name: 'moreOa',
+    component: () => import('@/views/moreInformation/moreOa.vue'),
   }
 ]
 export const router = createRouter({
