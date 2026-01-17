@@ -77,9 +77,9 @@ const routes = [
     component: () => import('@/views/moreInformation/moreInfoPage.vue'),
   },
   {
-    path: '/moreOa',
-    name: 'moreOa',
-    component: () => import('@/views/moreInformation/moreOa.vue'),
+    path: '/team/:id',
+    name: 'TeamDetail',
+    component: () => import('@/views/TeamDetail.vue'),
   }
 ]
 export const router = createRouter({

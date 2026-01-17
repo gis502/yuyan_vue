@@ -36,3 +36,21 @@ export const searchTeams = async (keyword) => {
     throw error;
   }
 };
+
+/**
+ * 根据ID获取团队详情
+ * @param {number} id - 团队ID
+ * @returns {Promise<Object>} 团队详情
+ */
+export const getTeamById = async (id) => {
+  try {
+    const response = await fetch(`${API_BASE_URL}/${id}`);
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return await response.json();
+  } catch (error) {
+    console.error('获取团队详情失败:', error);
+    throw error;
+  }
+};
