@@ -39,6 +39,11 @@
 .footer-info img{
   width: 64px;
   height: 69px;
+  margin-right: 20px;
+}
+
+.footer-info img:last-child{
+  margin-right: 0;
 }
 
 .footer-text {

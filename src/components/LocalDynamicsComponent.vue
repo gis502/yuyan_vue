@@ -3,7 +3,7 @@
     <div class="title">
       <div class="title-content">
         <img src="@/assets/images/titleLeft.png" alt="title left" />
-        <span class="title-span">本地<span class="title-blue">动态</span></span>
+        <span class="title-span">地方<span class="title-blue">动态</span></span>
         <img src="@/assets/images/titleRight.png" alt="title right" />
       </div>
     </div>
