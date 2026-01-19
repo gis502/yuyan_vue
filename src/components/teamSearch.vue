@@ -28,7 +28,7 @@
     <div class="team-list-container">
       <!-- 加载状态 -->
       <div v-if="loading" class="loading-state">
-        <el-spin size="large" />
+
       </div>
 
       <!-- 搜索结果显示 -->
@@ -41,6 +41,7 @@
             class="team-item"
             v-for="(item, index) in searchResult"
             :key="item.id || index"
+            @click="goToTeamDetail(item.id)"
           >
             <div class="team-info">
               <div class="team-header">
@@ -64,6 +65,7 @@
           class="team-item"
           v-for="(item, index) in allTeams"
           :key="item.id || index"
+          @click="goToTeamDetail(item.id)"
         >
           <div class="team-info">
             <div class="team-header">
@@ -83,6 +85,7 @@ import { ref, onMounted, onUnmounted, watch } from 'vue';
 import { ElInput, ElEmpty, ElMessage } from 'element-plus';
 import { Search as SearchIcon } from '@element-plus/icons-vue';
 import { getAllTeams, searchTeams } from '@/api/teamApi';
+import { useRouter } from 'vue-router';
 
 // 响应式数据
 const allTeams = ref([]);
@@ -90,6 +93,8 @@ const searchKey = ref('');
 const searchResult = ref([]); 
 const scrollInterval = ref(null); 
 const loading = ref(true);
+
+const router = useRouter();
 
 // 获取所有团队数据
 const fetchTeams = async () => {
@@ -170,6 +175,11 @@ onUnmounted(() => {
     clearInterval(scrollInterval.value);
   }
 });
+
+// 跳转到团队详情页
+const goToTeamDetail = (id) => {
+  router.push(`/team/${id}`);
+};
 
 // 监听搜索关键词变化，控制滚动状态
 watch(searchKey, (newVal) => {
@@ -305,17 +315,32 @@ watch(searchKey, (newVal) => {
   justify-content: center;
 }
 
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3F93DA;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 /* 队伍项样式 */
 .team-item {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 16px 20px;
+  padding: 12px 16px;
   margin-bottom: 8px;
   background: #F9FAFB;
   border-radius: 8px;
   transition: background 0.2s ease;
-  min-height: 80px;
+  min-height: 70px;
+  cursor: pointer;
 }
 
 .team-item:hover {
@@ -324,6 +349,7 @@ watch(searchKey, (newVal) => {
 
 .team-info {
   flex: 1;
+  min-width: 0; /* 确保flex项目能收缩 */
 }
 
 .team-header {
@@ -334,7 +360,7 @@ watch(searchKey, (newVal) => {
 }
 
 .team-name {
-  font-size: 16px;
+  font-size: 18px;
   color: #333;
   font-weight: 500;
   flex: 1;
@@ -345,7 +371,7 @@ watch(searchKey, (newVal) => {
 }
 
 .team-region {
-  font-size: 14px;
+  font-size: 16px;
   color: #3F93DA;
   font-weight: 500;
   background: #EBF5FF;
@@ -357,11 +383,15 @@ watch(searchKey, (newVal) => {
 }
 
 .team-description {
-  font-size: 13px;
+  font-size: 14px;
   color: #6B7280;
   line-height: 1.4;
-  display: block;
-  word-break: break-word;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 /* 滚动条样式优化 */
