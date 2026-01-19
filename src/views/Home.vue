@@ -70,8 +70,8 @@ import Search from "@//components/Search.vue"
 
 .banner-maker {
   position: absolute;
-  bottom: 24px;
-  right: 40px;
+  bottom: 55px;
+  right: 75px;
   font-size: 18px;
   color: #9b683e;
   font-weight: bold;
