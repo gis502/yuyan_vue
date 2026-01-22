@@ -13,7 +13,7 @@
         <FrontierOfEquipmentTechnology />
     </div>
     <div class="tech-item">
-      <a href="/moreInfo/technology" class="tech-date">查看更多</a>
+      <a href="./index.html#/moreInfo/technology" class="tech-date">查看更多</a>
     </div>
   </div>
 </template>

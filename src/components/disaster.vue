@@ -10,28 +10,28 @@
     <div class="disaster-map">
       <ul>
         <li class="map">
-          <a href="/disaster1" target="_blank">
+          <a href="./index.html#/disaster1" target="_blank">
             <img src="/images/disaster/disaster-1-cover.png" alt>
           </a>
           <p class="map-info">1·17 西藏定日6.8级地震应急监测评估</p>
           <p class="time">2025-01-18 10:22</p>
         </li>
         <li class="map">
-          <a href="/disaster2" target="_blank">
+          <a href="./index.html#/disaster2" target="_blank">
             <img src="/images/disaster/disaster-2-cover.png" alt>
           </a>
           <p class="map-info">2·10 四川筠连山体滑坡应急监测评估</p>
           <p class="time">2025-02-11 11:20</p>
         </li>
         <li class="map">
-          <a href="/disaster3" target="_blank">
+          <a href="./index.html#/disaster3" target="_blank">
             <img src="/images/disaster/disaster-3-cover.png" alt>
           </a>
           <p class="map-info">3·22 云南福贡县亚目水电站滑坡应急监测评估</p>
           <p class="time">2025-03-22 15:43</p>
         </li>
         <li class="map">
-          <a href="/disaster4" target="_blank">
+          <a href="./index.html#/disaster4" target="_blank">
             <img src="/images/disaster/disaster-4-cover.png" alt>
           </a>
           <p class="map-info">5·26 贵州大方县果瓦乡山体滑坡应急监测评估</p>
@@ -40,7 +40,7 @@
       </ul>
     </div>
     <div class="disaster-item">
-      <a href="/moreInfo/disaster" class="disaster-date">查看更多</a>
+      <a href="./index.html#/moreInfo/disaster" class="disaster-date">查看更多</a>
     </div>
   </div>
 </template>

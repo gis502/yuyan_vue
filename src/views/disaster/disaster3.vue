@@ -9,7 +9,7 @@
 import "@vue-office/docx/lib/index.css";
 import Document from "@/components/document.vue";
 
-const docxUrl = `/docx/灾害应急/20250322-灾害应急：云南福贡县亚目水电站滑坡应急监测.docx`
+const docxUrl = `/docx/disaster/3.docx`
 </script>
 
 <style scoped>

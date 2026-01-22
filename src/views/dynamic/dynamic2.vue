@@ -9,7 +9,7 @@
 import "@vue-office/docx/lib/index.css";
 import Document from "@/components/document.vue";
 
-const docxUrl = `/docx/机制动态/20250307-机制动态：“重大灾害无人机应急合作机制”2025年考核和增补工作圆满完成.docx`
+const docxUrl = `/docx/dynamic/20250307-机制动态：“重大灾害无人机应急合作机制”2025年考核和增补工作圆满完成.docx`
 </script>
 
 <style scoped>

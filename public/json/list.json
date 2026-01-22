@@ -3,147 +3,95 @@
     {
       "title": "雨燕应急重大灾害无人机应急合作机制成员招募公告",
       "time": "2025-12-18 15:29",
-      "route": {
-        "name": "notice",
-        "params": {}
-      }
+      "url": "./index.html#/notice"
     }
   ],
   "dynamic": [
     {
       "title": "\"重大灾害无人机应急合作机制\"业务交流和技术研讨会在哈尔滨召开",
       "time": "2025-02-10 10：08",
-      "route": {
-        "name": "dynamic1",
-        "params": {}
-      }
+      "url": "./index.html#/dynamic1"
     },
     {
       "title": "\"重大灾害无人机应急合作机制\"2025年考核和增补工作圆满完成",
       "time": "2025-03-07 16：20",
-      "route": {
-        "name": "dynamic2",
-        "params": {}
-      }
+      "url": "./index.html#/dynamic2"
     },
     {
       "title": "聚青年英才之力 筑无人机应急防线",
       "time": "",
-      "route": {
-        "name": "dynamic3",
-        "params": {}
-      }
+      "url": "./index.html#/dynamic3"
     },
     {
       "title": "\"雨燕应急\"2025首期线上培训圆满完成，684名无人机应急尖兵云端集结",
       "time": "",
-      "route": {
-        "name": "dynamic4",
-        "params": {}
-      }
+      "url": "./index.html#/dynamic4"
     },
     {
       "title": "国家减灾中心派员参加2025第九届世界无人机大会暨UASE无人机展",
       "time": "",
-      "route": {
-        "name": "dynamic5",
-        "params": {}
-      }
+      "url": "./index.html#/dynamic5"
     }
   ],
   "disaster": [
     {
       "title": "1·17 西藏定日6.8级地震应急监测评估",
       "time": "",
-      "route": {
-        "name": "disaster1",
-        "params": {}
-      }
+      "url": "./index.html#/disaster1"
     },
     {
       "title": "2·10 四川筠连山体滑坡应急监测评估",
       "time": "",
-      "route": {
-        "name": "disaster2",
-        "params": {}
-      }
+      "url": "./index.html#/disaster2"
     },
     {
       "title": "3·22 云南福贡县亚目水电站滑坡应急监测评估",
       "time": "",
-      "route": {
-        "name": "disaster3",
-        "params": {}
-      }
+      "url": "./index.html#/disaster3"
     },
     {
       "title": "5·26 贵州大方县果瓦乡山体滑坡应急监测评估",
       "time": "",
-      "route": {
-        "name": "disaster4",
-        "params": {}
-      }
+      "url": "./index.html#/disaster4"
     },
     {
       "title": "7·31 山东济南市莱芜区大王庄镇山洪无人机应急监测",
       "time": "",
-      "route": {
-        "name": "disaster5",
-        "params": {}
-      }
+      "url": "./index.html#/disaster5"
     }
   ],
   "trends": [
     {
       "title": "",
       "time": "",
-      "route": {
-        "name": "",
-        "params": {}
-      }
+      "url": ""
     }
   ],
-
   "technology": [
     {
       "title": "20250103-技术前沿：远程无人机洪灾应急信息全自主感知",
       "time": "",
-      "route": {
-        "name": "TechArticle",
-        "params": {"id": 1}
-      }
+      "url": "./index.html#/technology/1"
     },
     {
       "title": "20250106-技术前沿：基于道路中心线的分阶段弱监督遥感图像道路提取",
       "time": "",
-      "route": {
-        "name": "TechArticle",
-        "params": {"id": 2}
-      }
+      "url": "./index.html#/technology/2"
     },
     {
       "title": "20250125-技术前沿：高分辨率遥感影像复杂目标检测技术及减灾应用-推文",
       "time": "",
-      "route": {
-        "name": "TechArticle",
-        "params": {"id": 3}
-      }
+      "url": "./index.html#/technology/3"
     },
     {
       "title": "20250224-技术前沿：基于多模遥感图像和相关知识的建筑结构类型识别技术",
       "time": "",
-      "route": {
-        "name": "TechArticle",
-        "params": {"id": 4}
-      }
+      "url": "./index.html#/technology/4"
     },
     {
       "title": "20250515-技术前沿：基于双时相场景变化检测的弱监督灾后建筑物损毁遥感判识技术",
       "time": "",
-      "route": {
-        "name": "TechArticle",
-        "params": {"id": 5}
-      }
+      "url": "./index.html#/technology/5"
     }
   ]
 }

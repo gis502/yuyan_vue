@@ -10,7 +10,7 @@
     <div class="dynamics-list">
       <div class="dynamics-item">
         <img src="/images/point.png" alt="">
-        <a href="/dynamic1" target="_blank">本地应急响应演练圆满结束，提升区域协同能力</a>
+        <a href="./index.html#/dynamic1" target="_blank">本地应急响应演练圆满结束，提升区域协同能力</a>
         <div class="dynamics-date">2025-01-15</div>
       </div>
     </div>

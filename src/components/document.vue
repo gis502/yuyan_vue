@@ -14,15 +14,15 @@
       <!-- 面包屑导航 -->
       <div class="breadcrumb-container">
         <div class="breadcrumb">
-          <router-link to="/" class="breadcrumb-item">首页</router-link>
+          <a href="./index.html" class="breadcrumb-item">首页</a>
           <span class="breadcrumb-separator">/</span>
-          <router-link
+          <a
               v-if="breadcrumbLink"
-              :to="breadcrumbLink"
+              :href="breadcrumbLink"
               class="breadcrumb-item"
           >
             {{ breadcrumbName }}
-          </router-link>
+          </a>
           <span v-else class="breadcrumb-item current">
             {{ breadcrumbName }}
           </span>
@@ -77,7 +77,7 @@ const router = useRouter();
 
 // 返回按钮点击事件
 const handleBack = () => {
-  router.push('/');
+  window.location.href = './index.html'
 };
 
 // 文档渲染完成后的处理

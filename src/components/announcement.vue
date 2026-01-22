@@ -104,7 +104,7 @@ const guideItems = [
 const swiperContainer = ref(null);
 const handleTitleClick = (item, e) => {
   if (item.id === 7) {
-    router.push('/notice');
+    window.location.href = './index.html#/notice';
   }
 };
 

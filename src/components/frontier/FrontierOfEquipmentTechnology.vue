@@ -1,19 +1,84 @@
 <template>
   <div class="technology-list">
     <ul>
-      <li v-for="(item, index) in list" :key="index" class="technology-item">
+      <li class="technology-item">
         <div class="technology-item-img">
-          <img
-              :src="item.img"
-              alt="技术文章缩略图"
-              class="technology-item-img-children"
-              @click="turnPage(index)"
-          />
+          <a href="./index.html#/technology/1" target="_blank">
+            <img
+                src="/images/technology/1.png"
+                alt="技术文章缩略图"
+                class="technology-item-img-children"
+            />
+          </a>
         </div>
         <div class="technology-item-content">
-          <div class="technology-item-title" @click="turnPage(index)">
-            {{ item.title }}
-          </div>
+          <a href="./index.html#/technology/1" target="_blank" class="technology-item-title">
+            20250103-技术前沿：远程无人机洪灾应急信息全自主感知
+          </a>
+        </div>
+      </li>
+      <li class="technology-item">
+        <div class="technology-item-img">
+          <a href="./index.html#/technology/2" target="_blank">
+            <img
+                src="/images/technology/2.png"
+                alt="技术文章缩略图"
+                class="technology-item-img-children"
+            />
+          </a>
+        </div>
+        <div class="technology-item-content">
+          <a href="./index.html#/technology/2" target="_blank" class="technology-item-title">
+            20250106-技术前沿：基于道路中心线的分阶段弱监督遥感图像道路提取
+          </a>
+        </div>
+      </li>
+      <li class="technology-item">
+        <div class="technology-item-img">
+          <a href="./index.html#/technology/3" target="_blank">
+            <img
+                src="/images/technology/3.png"
+                alt="技术文章缩略图"
+                class="technology-item-img-children"
+            />
+          </a>
+        </div>
+        <div class="technology-item-content">
+          <a href="./index.html#/technology/3" target="_blank" class="technology-item-title">
+            20250125-技术前沿：高分辨率遥感影像复杂目标检测技术及减灾应用-推文
+          </a>
+        </div>
+      </li>
+      <li class="technology-item">
+        <div class="technology-item-img">
+          <a href="./index.html#/technology/4" target="_blank">
+            <img
+                src="/images/technology/4.png"
+                alt="技术文章缩略图"
+                class="technology-item-img-children"
+            />
+          </a>
+        </div>
+        <div class="technology-item-content">
+          <a href="./index.html#/technology/4" target="_blank" class="technology-item-title">
+            20250224-技术前沿：基于多模遥感图像和相关知识的建筑结构类型识别技术
+          </a>
+        </div>
+      </li>
+      <li class="technology-item">
+        <div class="technology-item-img">
+          <a href="./index.html#/technology/5" target="_blank">
+            <img
+                src="/images/technology/5.png"
+                alt="技术文章缩略图"
+                class="technology-item-img-children"
+            />
+          </a>
+        </div>
+        <div class="technology-item-content">
+          <a href="./index.html#/technology/5" target="_blank" class="technology-item-title">
+            20250515-技术前沿：基于双时相场景变化检测的弱监督灾后建筑物损毁遥感判识技术
+          </a>
         </div>
       </li>
     </ul>
@@ -21,35 +86,7 @@
 </template>
 
 <script lang="js" setup>
-import { router } from '@/router/index.js'
-import { ref } from 'vue'
 
-const list = ref([
-  {
-    img: '/images/technology/1.png',
-    title: '20250103-技术前沿：远程无人机洪灾应急信息全自主感知',
-  },
-  {
-    img: '/images/technology/2.png',
-    title: '20250106-技术前沿：基于道路中心线的分阶段弱监督遥感图像道路提取',
-  },
-  {
-    img: '/images/technology/3.png',
-    title: '20250125-技术前沿：高分辨率遥感影像复杂目标检测技术及减灾应用-推文',
-  },
-  {
-    img: '/images/technology/4.png',
-    title: '20250224-技术前沿：基于多模遥感图像和相关知识的建筑结构类型识别技术',
-  },
-  {
-    img: '/images/technology/5.png',
-    title: '20250515-技术前沿：基于双时相场景变化检测的弱监督灾后建筑物损毁遥感判识技术',
-  }
-])
-
-function turnPage(index) {
-  router.push(`/technology/${index + 1}`)
-}
 </script>
 
 <style scoped>

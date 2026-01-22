@@ -17,7 +17,7 @@ const docId = computed(() => {
 });
 
 const docxUrl = computed(() => {
-  return `/docx/技术装备前沿/${docId.value}.docx`;
+  return `/docx/technicaldox/${docId.value}.docx`;
 });
 
 </script>

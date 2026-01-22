@@ -3,12 +3,15 @@ import { fileURLToPath, URL } from 'node:url'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
+import {viteSingleFile} from "vite-plugin-singlefile";
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: './',  // 修改：使用相对路径
   plugins: [
     vue(),
     vueDevTools(),
+    viteSingleFile()
   ],
   resolve: {
     alias: {
@@ -17,6 +20,14 @@ export default defineConfig({
   },
   server: {
     port: 7000,
-    strictPort: true  // 当端口被占用时抛出错误而不是尝试其他端口
+    strictPort: true
+  },
+  build: {
+    cssCodeSplit: false,  // 禁用 CSS 代码分割
+    rollupOptions: {
+      output: {
+        inlineDynamicImports: true,
+      }
+    }
   }
 })

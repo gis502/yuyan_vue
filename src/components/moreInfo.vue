@@ -14,7 +14,7 @@
       <!-- 面包屑导航 -->
       <div class="breadcrumb-container">
         <div class="breadcrumb">
-          <router-link to="/" class="breadcrumb-item">首页</router-link>
+          <a href="./index.html" class="breadcrumb-item">首页</a>
           <span class="breadcrumb-separator">/</span>
           <span class="breadcrumb-item current">{{ pageTitle }}</span>
         </div>
@@ -32,20 +32,19 @@
           <b></b>{{ pageTitle }}
         </div>
 
-        <!-- 新闻列表 -->
         <ul class="laws-list">
           <li
               v-for="(item, index) in newsList"
               :key="index"
               class="laws-item"
           >
-            <router-link
-                :to="item.route"
+            <a
+                :href="item.url"
                 class="lt laws"
                 target="_blank"
             >
               <span v-html="highlightTitle(item.title, item)"></span>
-            </router-link>
+            </a>
             <span class="rt time">{{ item.time }}</span>
           </li>
         </ul>
@@ -132,7 +131,7 @@ const props = defineProps({
       return value.every(item =>
           item.title &&
           item.time &&
-          item.route
+          item.url
       );
     }
   },
