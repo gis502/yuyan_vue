@@ -32,9 +32,54 @@ const routes = [
     component: () => import('@/views/dynamic/dynamic5.vue')
   },
   {
-    path: '/technology/:id',
-    name: 'TechArticle',
-    component: () => import('@/views/frontier/TechnologyPage.vue'),
+    path: '/technology1',
+    name: 'technology1',
+    component: () => import('@/views/frontier/Technology1.vue')
+  },
+  {
+    path: '/technology2',
+    name: 'technology2',
+    component: () => import('@/views/frontier/Technology2.vue')
+  },
+  {
+    path: '/technology3',
+    name: 'technology3',
+    component: () => import('@/views/frontier/Technology3.vue')
+  },
+  {
+    path: '/technology4',
+    name: 'technology4',
+    component: () => import('@/views/frontier/Technology4.vue')
+  },
+  {
+    path: '/technology5',
+    name: 'technology5',
+    component: () => import('@/views/frontier/Technology5.vue')
+  },
+  {
+    path: '/frontier/technology1',
+    name: 'Technology1',
+    component: () => import('@/views/frontier/Technology1.vue')
+  },
+  {
+    path: '/frontier/technology2',
+    name: 'Technology2',
+    component: () => import('@/views/frontier/Technology2.vue')
+  },
+  {
+    path: '/frontier/technology3',
+    name: 'Technology3',
+    component: () => import('@/views/frontier/Technology3.vue')
+  },
+  {
+    path: '/frontier/technology4',
+    name: 'Technology4',
+    component: () => import('@/views/frontier/Technology4.vue')
+  },
+  {
+    path: '/frontier/technology5',
+    name: 'Technology5',
+    component: () => import('@/views/frontier/Technology5.vue')
   },
   {
     path: '/notice',

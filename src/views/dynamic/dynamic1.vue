@@ -70,7 +70,6 @@
             <p style="margin-bottom: 7.8pt; text-align: center;">
               <span style="font-family: 仿宋_GB2312; min-height: 14pt; font-size: 14pt;">
                 <div style="display: block; position: relative; text-indent: 0px; width: 100%; height: auto; margin: 0px auto;">
-                  <!-- 注意：这个 blob URL 是临时的，实际部署需替换为真实图片路径 -->
                   <img src="/images/dynamic/dynamic1.jpg" style="position: relative; left: 0pt; top: 0pt; width: 100%; height: auto;" />
                 </div>
               </span>
