@@ -38,11 +38,12 @@
               :key="index"
               class="laws-item"
           >
-            <a
-                :href="item.url"
-                class="lt laws"
-                target="_blank"
-            >
+          <a
+              :href="keyword ? `${item.url}?keyword=${keyword}` : item.url"
+              class="lt laws"
+              target="_blank"
+          >
+
               <span v-html="highlightTitle(item.title, item)"></span>
             </a>
             <span class="rt time">{{ item.time }}</span>
@@ -113,7 +114,7 @@
 
 <script setup>
 import { ref, computed, onMounted } from 'vue';
-import { useRouter } from 'vue-router';
+import {useRoute, useRouter} from 'vue-router';
 import Foot from "@/components/foot.vue";
 
 // 定义 props
@@ -151,7 +152,9 @@ const props = defineProps({
   }
 });
 
+const route = useRoute();
 const router = useRouter();
+const keyword = computed(() => route.query.keyword || '');
 
 const highlightTitle = (title, item) => {
   // 如果没有关键词，直接返回原标题
