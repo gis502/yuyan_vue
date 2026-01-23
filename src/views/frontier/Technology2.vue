@@ -1,5 +1,5 @@
 <template>
-  <NoticeCommon header="技术前沿" :content="list?.technology?.[1]?.html" />
+  <NoticeCommon header="技术前沿" :content="list?.technology?.[1]?.html" :href="list?.technology?.[1]?.moreInfo" />
 </template>
 
 <script setup>

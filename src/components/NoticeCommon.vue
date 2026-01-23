@@ -17,7 +17,7 @@
           <a href="./index.html" class="breadcrumb-item">首页</a>
           <span class="breadcrumb-separator">/</span>
           <a
-              href="./index.html#/moreInfo/technology"
+              :href="`./index.html#/moreInfo/` + href"
               class="breadcrumb-item"
           >
             {{ header }}
@@ -46,7 +46,8 @@ import { onMounted, ref, watch } from "vue";
 
 const props = defineProps({
   header: String,
-  content: String
+  content: String,
+  href: String
 });
 
 // 定义容器引用，用于后续操作DOM

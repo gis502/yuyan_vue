@@ -112,11 +112,6 @@ const routes = [
     component: () => import('@/views/disaster/disaster5.vue')
   },
   {
-    path: '/description',
-    name: 'description',
-    component: () => import('@/views/description.vue'),
-  },
-  {
     path: '/moreInfo/:id',
     name: 'more',
     component: () => import('@/views/moreInformation/moreInfoPage.vue'),
