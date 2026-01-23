@@ -414,7 +414,6 @@ watch(() => props.content, () => {
 
   .document-content {
     width: 100%;
-    margin-left: 0;
     padding: 10px;
   }
 }
