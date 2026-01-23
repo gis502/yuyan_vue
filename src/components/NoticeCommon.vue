@@ -29,9 +29,8 @@
       </div>
 
       <!-- 渲染后的通知内容 -->
-      <div class="docx-renderer">
+      <div class="docx-renderer" ref="contentContainer">
         <div v-html="content">
-
         </div>
       </div>
     </main>
@@ -43,21 +42,112 @@
 <script setup>
 // 组件导入
 import Foot from "@/components/foot.vue";
+import { onMounted, ref, watch } from "vue";
 
 const props = defineProps({
   header: String,
   content: String
 });
 
-/**
- * 处理返回首页按钮点击事件
- * 使用 window.location.href 进行页面跳转
- */
+// 定义容器引用，用于后续操作DOM
+const contentContainer = ref(null);
+
+// 跳转到首页
 function handleBack() {
-  // 跳转到首页
   window.location.href = './index.html';
 }
 
+/**
+ * 从URL中解析参数
+ * @param {String} name - 要获取的参数名
+ * @returns {String|null} - 参数值
+ */
+function getUrlParam(name) {
+  // 兼容hash模式和普通模式的URL解析
+  const search = window.location.href.includes('?')
+      ? window.location.href.split('?')[1]
+      : window.location.hash.split('?')[1] || '';
+  const params = new URLSearchParams(search);
+  return params.get(name) || null;
+}
+
+/**
+ * 高亮关键字
+ * @param {String} keyword - 要高亮的关键字
+ */
+function highlightKeyword(keyword) {
+  if (!keyword || !contentContainer.value) return;
+
+  // 移除之前的高亮（避免重复高亮）
+  const highlightedElements = contentContainer.value.querySelectorAll('.keyword-highlight');
+  highlightedElements.forEach(el => {
+    // 恢复原始文本，移除高亮标签
+    const parent = el.parentNode;
+    parent.replaceChild(document.createTextNode(el.textContent), el);
+    parent.normalize(); // 合并相邻文本节点
+  });
+
+  // 创建文本查找器，避免替换标签内的内容
+  const walker = document.createTreeWalker(
+      contentContainer.value,
+      NodeFilter.SHOW_TEXT,
+      (node) => {
+        // 排除script/style等标签，只处理正文文本
+        const ignoreTags = ['SCRIPT', 'STYLE', 'TITLE', 'IMG', 'BR'];
+        return !ignoreTags.includes(node.parentElement?.tagName) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP;
+      }
+  );
+
+  const textNodes = [];
+  let currentNode;
+  while (currentNode = walker.nextNode()) {
+    textNodes.push(currentNode);
+  }
+
+  // 遍历所有文本节点，替换关键字
+  textNodes.forEach(node => {
+    const text = node.textContent;
+    if (text.includes(keyword)) {
+      // 分割文本，插入高亮标签
+      const parts = text.split(new RegExp(`(${keyword})`, 'g'));
+      const fragment = document.createDocumentFragment();
+
+      parts.forEach(part => {
+        if (part === keyword) {
+          // 创建红色高亮的span标签
+          const span = document.createElement('span');
+          span.className = 'keyword-highlight';
+          span.style.color = 'red';
+          span.style.fontWeight = 'bold'; // 可选：加粗突出
+          span.textContent = part;
+          fragment.appendChild(span);
+        } else if (part) {
+          fragment.appendChild(document.createTextNode(part));
+        }
+      });
+
+      // 替换原文本节点
+      node.parentNode.replaceChild(fragment, node);
+    }
+  });
+}
+
+// 组件挂载后执行高亮逻辑
+onMounted(() => {
+  const keyword = getUrlParam('keyword');
+  if (keyword) {
+    // 延迟执行，确保v-html渲染完成
+    setTimeout(() => highlightKeyword(decodeURIComponent(keyword)), 100);
+  }
+});
+
+// 监听content变化，重新高亮（防止内容动态更新后失效）
+watch(() => props.content, () => {
+  const keyword = getUrlParam('keyword');
+  if (keyword) {
+    setTimeout(() => highlightKeyword(decodeURIComponent(keyword)), 100);
+  }
+}, {immediate: false});
 
 </script>
 
@@ -164,11 +254,13 @@ function handleBack() {
   padding-left: 25px;
   margin: 0;
 }
+
 :deep(.ol-bracket li) {
   counter-increment: list-num;
   position: relative;
   margin: 8px 0;
 }
+
 :deep(.ol-bracket li::before) {
   content: "(" counter(list-num) ")";
   position: absolute;
@@ -195,17 +287,20 @@ function handleBack() {
   padding-bottom: 20px;
   font-family: "FZHei";
 }
+
 :deep(.article-title) {
   font-size: 1.75rem;
   font-weight: bold;
   margin-bottom: 1rem;
   letter-spacing: 0.03125rem;
 }
+
 :deep(.article-authors) {
   font-size: 1rem;
   margin-bottom: 0.5rem;
   font-style: normal;
 }
+
 :deep(.article-affiliation) {
   font-size: 14px;
   color: #666;
@@ -216,6 +311,7 @@ function handleBack() {
 :deep(.article-section) {
   margin-bottom: 2.25rem;
 }
+
 :deep(.section-title) {
   font-size: 1.125rem;
   font-weight: bold;
@@ -241,6 +337,7 @@ function handleBack() {
   padding-left: 30px;
   margin-bottom: 16px;
 }
+
 :deep(.ol-bracket li) {
   counter-increment: list-num;
   position: relative;
@@ -248,6 +345,7 @@ function handleBack() {
   font-size: 16px;
   text-align: justify;
 }
+
 :deep(.ol-bracket li::before) {
   content: "(" counter(list-num) ")";
   position: absolute;
@@ -284,23 +382,40 @@ function handleBack() {
   justify-content: space-between;
   margin: 16px 0;
 }
+
 :deep(.img-col-item) {
   width: 48%;
   margin-bottom: 12px;
 }
+
+/* 关键字高亮样式 */
+:deep(.keyword-highlight) {
+  color: red !important;
+  font-weight: bold !important;
+}
+
 /* 响应式适配：小屏幕下单列显示 */
 @media (max-width: 768px) {
   :deep(.academic-article) {
     padding: 20px 20px;
   }
+
   :deep(.img-col-item) {
     width: 100%;
   }
+
   :deep(.article-title) {
     font-size: 22px;
   }
+
   :deep(.section-title) {
     font-size: 18px;
+  }
+
+  .document-content {
+    width: 100%;
+    margin-left: 0;
+    padding: 10px;
   }
 }
 </style>
