@@ -11,6 +11,7 @@ import { ref, onMounted } from 'vue';
 import { ElMessage } from 'element-plus';
 import { useRoute } from 'vue-router';
 import DocumentOther from "@/components/documentOther.vue";
+import teamsData from '/public/json/teams.json';
 
 const route = useRoute();
 const team = ref(null);
@@ -20,15 +21,9 @@ const loading = ref(true);
 const teamId = parseInt(route.params.id);
 
 // 获取团队详情
-const fetchTeamDetail = async () => {
+const fetchTeamDetail = () => {
   try {
     loading.value = true;
-    // 从public/json/teams.json文件直接读取数据
-    const response = await fetch('/json/teams.json');
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-    const teamsData = await response.json();
     
     // 查找对应ID的团队
     const teamFound = teamsData.find(team => team.id === teamId);

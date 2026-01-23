@@ -86,6 +86,7 @@ import { ElInput, ElEmpty, ElMessage } from 'element-plus';
 import { Search as SearchIcon } from '@element-plus/icons-vue';
 
 import { useRouter } from 'vue-router';
+import teamsData from '/public/json/teams.json';
 
 // 响应式数据
 const allTeams = ref([]);
@@ -100,13 +101,8 @@ const router = useRouter();
 const fetchTeams = async () => {
   try {
     loading.value = true;
-    // 从public/json/teams.json文件直接读取数据
-    const response = await fetch('/json/teams.json');
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-    const data = await response.json();
-    allTeams.value = data;
+    // 使用导入的团队数据
+    allTeams.value = teamsData;
   } catch (error) {
     console.error('获取团队数据失败:', error);
     ElMessage.error('获取团队数据失败，请稍后重试');
