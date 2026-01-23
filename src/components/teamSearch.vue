@@ -84,8 +84,9 @@
 import { ref, onMounted, onUnmounted, watch } from 'vue';
 import { ElInput, ElEmpty, ElMessage } from 'element-plus';
 import { Search as SearchIcon } from '@element-plus/icons-vue';
-import { getAllTeams, searchTeams } from '@/api/teamApi';
+
 import { useRouter } from 'vue-router';
+import teamsData from '/public/json/teams.json';
 
 // 响应式数据
 const allTeams = ref([]);
@@ -100,12 +101,11 @@ const router = useRouter();
 const fetchTeams = async () => {
   try {
     loading.value = true;
-    const data = await getAllTeams();
-    allTeams.value = data;
+    // 使用导入的团队数据
+    allTeams.value = teamsData;
   } catch (error) {
     console.error('获取团队数据失败:', error);
     ElMessage.error('获取团队数据失败，请稍后重试');
-    // 如果API不可用，使用默认数据
     allTeams.value = [];
   } finally {
     loading.value = false;
@@ -113,26 +113,19 @@ const fetchTeams = async () => {
 };
 
 // 模糊搜索处理函数
-const handleSearch = async () => {
+const handleSearch = () => {
   if (!searchKey.value.trim()) {
     searchResult.value = [];
     return;
   }
   
-  try {
-    searchResult.value = await searchTeams(searchKey.value);
-  } catch (error) {
-    console.error('搜索失败:', error);
-    ElMessage.error('搜索失败，请稍后重试');
-    // 搜索失败时使用前端过滤
-    const key = searchKey.value.trim().toLowerCase();
-    searchResult.value = allTeams.value.filter(
-      item =>
-        item.name.toLowerCase().includes(key) ||
-        item.region.toLowerCase().includes(key) ||
-        (item.description && item.description.toLowerCase().includes(key))
-    );
-  }
+  const key = searchKey.value.trim().toLowerCase();
+  searchResult.value = allTeams.value.filter(
+    item =>
+      item.name.toLowerCase().includes(key) ||
+      item.region.toLowerCase().includes(key) ||
+      (item.description && item.description.toLowerCase().includes(key))
+  );
 };
 
 // 自动滚动功能实现
