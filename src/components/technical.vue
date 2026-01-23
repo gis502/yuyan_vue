@@ -19,7 +19,7 @@
 </template>
 
 <script setup>
-import FrontierOfEquipmentTechnology from "./frontier/FrontierOfEquipmentTechnology.vue";
+import FrontierOfEquipmentTechnology from "./FrontierOfEquipmentTechnology.vue";
 </script>
 
 <style scoped>
