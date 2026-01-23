@@ -196,14 +196,14 @@ function handleBack() {
   font-family: "FZHei";
 }
 :deep(.article-title) {
-  font-size: 28px;
+  font-size: 1.75rem;
   font-weight: bold;
-  margin-bottom: 16px;
-  letter-spacing: 0.5px;
+  margin-bottom: 1rem;
+  letter-spacing: 0.03125rem;
 }
 :deep(.article-authors) {
-  font-size: 16px;
-  margin-bottom: 8px;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
   font-style: normal;
 }
 :deep(.article-affiliation) {
@@ -214,14 +214,14 @@ function handleBack() {
 
 /* 文章章节 */
 :deep(.article-section) {
-  margin-bottom: 36px;
+  margin-bottom: 2.25rem;
 }
 :deep(.section-title) {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: bold;
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
   color: #222;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.01875rem;
   font-family: "FZXiaoBiaoSong";
 }
 
