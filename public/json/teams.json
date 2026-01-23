@@ -1,0 +1,1334 @@
+[
+  {
+    "id": 1,
+    "name": "北京飞马航遥科技有限公司",
+    "region": "北京",
+    "description": "北京飞马航遥科技有限公司成立于2017年5月23日，法定代表人为张世杰，总部位于北京市海淀区建枫路（南延）6号院，注册资本1000万元人民币，系深圳飞马机器人股份有限公司全资子公司。公司主要从事技术开发、测绘服务、智能无人飞行器制造及数据处理业务，下设3家分支机构，2024年员工27人，税务信用等级连续四年获评A级。"
+  },
+  {
+    "id": 2,
+    "name": "北京神州数码有限公司",
+    "region": "北京",
+    "description": ""
+  },
+  {
+    "id": 3,
+    "name": "北京未来智能科技有限公司",
+    "region": "北京",
+    "description": ""
+  },
+  {
+    "id": 4,
+    "name": "北京中科浩电科技有限公司",
+    "region": "北京",
+    "description": ""
+  },
+  {
+    "id": 5,
+    "name": "北京蓝天飞扬科技有限公司",
+    "region": "北京",
+    "description": ""
+  },
+  {
+    "id": 6,
+    "name": "北京东进航空科技股份有限公司",
+    "region": "北京",
+    "description": ""
+  },
+  {
+    "id": 7,
+    "name": "华盈信通技术有限公司",
+    "region": "北京",
+    "description": ""
+  },
+  {
+    "id": 8,
+    "name": "航天宏图信息技术股份有限公司",
+    "region": "北京",
+    "description": ""
+  },
+  {
+    "id": 9,
+    "name": "北京根越科技有限公司",
+    "region": "北京",
+    "description": ""
+  },
+  {
+    "id": 10,
+    "name": "北京凌空远航科技有限公司",
+    "region": "北京",
+    "description": ""
+  },
+  {
+    "id": 11,
+    "name": "北京云圣智能科技有限公司",
+    "region": "北京",
+    "description": ""
+  },
+  {
+    "id": 12,
+    "name": "北京京东乾石科技有限公司",
+    "region": "北京",
+    "description": ""
+  },
+  {
+    "id": 13,
+    "name": "北京帝信科技有限公司",
+    "region": "北京",
+    "description": ""
+  },
+  {
+    "id": 14,
+    "name": "北京捷翔天地信息技术有限公司",
+    "region": "北京",
+    "description": ""
+  },
+  {
+    "id": 15,
+    "name": "中测新图（北京）遥感技术有限责任公司",
+    "region": "北京",
+    "description": ""
+  },
+  {
+    "id": 16,
+    "name": "中建材信息技术股份有限公司",
+    "region": "北京",
+    "description": ""
+  },
+  {
+    "id": 17,
+    "name": "天津津准工程勘测有限公司",
+    "region": "天津",
+    "description": ""
+  },
+  {
+    "id": 18,
+    "name": "天津众恒地信科技有限公司",
+    "region": "天津",
+    "description": ""
+  },
+  {
+    "id": 19,
+    "name": "中水北方勘测设计研究有限责任公司",
+    "region": "天津",
+    "description": ""
+  },
+  {
+    "id": 20,
+    "name": "河北福诺航空科技股份有限公司",
+    "region": "河北",
+    "description": ""
+  },
+  {
+    "id": 21,
+    "name": "河北零佰科技有限公司",
+    "region": "河北",
+    "description": ""
+  },
+  {
+    "id": 22,
+    "name": "河北惠得低空科技发展有限公司",
+    "region": "河北",
+    "description": ""
+  },
+  {
+    "id": 23,
+    "name": "河北风航无人机科技有限公司",
+    "region": "河北",
+    "description": ""
+  },
+  {
+    "id": 24,
+    "name": "石家庄铁路职业技术学院",
+    "region": "河北",
+    "description": ""
+  },
+  {
+    "id": 25,
+    "name": "中国地质调查局廊坊自然资源综合调查中心",
+    "region": "河北",
+    "description": ""
+  },
+  {
+    "id": 26,
+    "name": "山西火鸟航空科技有限公司",
+    "region": "山西",
+    "description": ""
+  },
+  {
+    "id": 27,
+    "name": "山西翼锦未来科技有限责任公司",
+    "region": "山西",
+    "description": ""
+  },
+  {
+    "id": 28,
+    "name": "山西元图测绘有限公司",
+    "region": "山西",
+    "description": ""
+  },
+  {
+    "id": 29,
+    "name": "山西昊天视界航空科技有限公司",
+    "region": "山西",
+    "description": ""
+  },
+  {
+    "id": 30,
+    "name": "山西如虹盛达科技股份有限公司",
+    "region": "山西",
+    "description": ""
+  },
+  {
+    "id": 31,
+    "name": "山西文达通信息技术有限公司",
+    "region": "山西",
+    "description": ""
+  },
+  {
+    "id": 32,
+    "name": "呼和浩特市富迈商贸有限责任公司",
+    "region": "内蒙古",
+    "description": ""
+  },
+  {
+    "id": 33,
+    "name": "呼伦贝尔市楠木科技发展有限公司",
+    "region": "内蒙古",
+    "description": ""
+  },
+  {
+    "id": 34,
+    "name": "内蒙古云航智能设备有限公司",
+    "region": "内蒙古",
+    "description": ""
+  },
+  {
+    "id": 35,
+    "name": "内蒙古国讯富通科技有限公司",
+    "region": "内蒙古",
+    "description": ""
+  },
+  {
+    "id": 36,
+    "name": "辽宁省化工地质勘查院有限责任公司",
+    "region": "辽宁",
+    "description": ""
+  },
+  {
+    "id": 37,
+    "name": "辽宁众云图测绘科技有限公司",
+    "region": "辽宁",
+    "description": ""
+  },
+  {
+    "id": 38,
+    "name": "辽宁川云智能科技集团有限公司",
+    "region": "辽宁",
+    "description": ""
+  },
+  {
+    "id": 39,
+    "name": "鞍钢工程技术勘测设计研究院（鞍山）有限公司",
+    "region": "辽宁",
+    "description": ""
+  },
+  {
+    "id": 40,
+    "name": "沈阳九州飞翔科技有限公司",
+    "region": "辽宁",
+    "description": ""
+  },
+  {
+    "id": 41,
+    "name": "吉林市测绘院",
+    "region": "吉林",
+    "description": ""
+  },
+  {
+    "id": 42,
+    "name": "吉林省元吉土地勘测规划设计有限公司",
+    "region": "吉林",
+    "description": ""
+  },
+  {
+    "id": 43,
+    "name": "吉林云信空间科技有限公司",
+    "region": "吉林",
+    "description": ""
+  },
+  {
+    "id": 44,
+    "name": "敦化市城乡规划设计院",
+    "region": "吉林",
+    "description": ""
+  },
+  {
+    "id": 45,
+    "name": "前郭县远大测绘有限公司",
+    "region": "吉林",
+    "description": ""
+  },
+  {
+    "id": 46,
+    "name": "黑龙江精臻科技发展有限公司",
+    "region": "黑龙江",
+    "description": ""
+  },
+  {
+    "id": 47,
+    "name": "黑龙江几何测绘地理信息有限公司",
+    "region": "黑龙江",
+    "description": ""
+  },
+  {
+    "id": 48,
+    "name": "黑龙江省第六地质勘查院",
+    "region": "黑龙江",
+    "description": ""
+  },
+  {
+    "id": 49,
+    "name": "黑龙江齐伦瀚科技有限公司",
+    "region": "黑龙江",
+    "description": ""
+  },
+  {
+    "id": 50,
+    "name": "哈尔滨市国土资源勘测规划院",
+    "region": "黑龙江",
+    "description": ""
+  },
+  {
+    "id": 51,
+    "name": "东北工程技术学校",
+    "region": "黑龙江",
+    "description": ""
+  },
+  {
+    "id": 52,
+    "name": "黑龙江省地质测绘地理信息院",
+    "region": "黑龙江",
+    "description": ""
+  },
+  {
+    "id": 53,
+    "name": "黑龙江省第五地质勘查院",
+    "region": "黑龙江",
+    "description": ""
+  },
+  {
+    "id": 54,
+    "name": "黑龙江省第九地质勘查院",
+    "region": "黑龙江",
+    "description": ""
+  },
+  {
+    "id": 55,
+    "name": "黑龙江省物探测量勘查院",
+    "region": "黑龙江",
+    "description": ""
+  },
+  {
+    "id": 56,
+    "name": "黑龙江省自然资源调查院",
+    "region": "黑龙江",
+    "description": ""
+  },
+  {
+    "id": 57,
+    "name": "上海畅突智能科技有限公司",
+    "region": "上海",
+    "description": ""
+  },
+  {
+    "id": 58,
+    "name": "必胜航空科技集团有限公司",
+    "region": "上海",
+    "description": ""
+  },
+  {
+    "id": 59,
+    "name": "上海锋则航空科技有限公司",
+    "region": "上海",
+    "description": ""
+  },
+  {
+    "id": 60,
+    "name": "上海翰萨智能科技有限公司",
+    "region": "上海",
+    "description": ""
+  },
+  {
+    "id": 61,
+    "name": "上海双瀛航空科技有限公司",
+    "region": "上海",
+    "description": ""
+  },
+  {
+    "id": 62,
+    "name": "上海华测导航技术股份有限公司",
+    "region": "上海",
+    "description": ""
+  },
+  {
+    "id": 63,
+    "name": "江苏丰东信息科技有限公司",
+    "region": "江苏",
+    "description": ""
+  },
+  {
+    "id": 64,
+    "name": "江苏嗨森网络科技有限公司",
+    "region": "江苏",
+    "description": ""
+  },
+  {
+    "id": 65,
+    "name": "南京渊湛信息科技有限公司",
+    "region": "江苏",
+    "description": ""
+  },
+  {
+    "id": 66,
+    "name": "泰州鸿鹄信息科技有限公司",
+    "region": "江苏",
+    "description": ""
+  },
+  {
+    "id": 67,
+    "name": "苏州游鹰无人机技术有限公司",
+    "region": "江苏",
+    "description": ""
+  },
+  {
+    "id": 68,
+    "name": "南通亿思特机器人科技有限公司",
+    "region": "江苏",
+    "description": ""
+  },
+  {
+    "id": 69,
+    "name": "华软科技股份有限公司",
+    "region": "江苏",
+    "description": ""
+  },
+  {
+    "id": 70,
+    "name": "宿迁智在疆宇航空科技有限公司",
+    "region": "江苏",
+    "description": ""
+  },
+  {
+    "id": 71,
+    "name": "南京青年蓝天救援队",
+    "region": "江苏",
+    "description": ""
+  },
+  {
+    "id": 72,
+    "name": "淮安云翼无人机科技有限公司",
+    "region": "江苏",
+    "description": ""
+  },
+  {
+    "id": 73,
+    "name": "江苏佰易信息科技有限公司",
+    "region": "江苏",
+    "description": ""
+  },
+  {
+    "id": 74,
+    "name": "常州市赛思网络科技有限公司",
+    "region": "江苏",
+    "description": ""
+  },
+  {
+    "id": 75,
+    "name": "江苏飞睿得科技有限公司",
+    "region": "江苏",
+    "description": ""
+  },
+  {
+    "id": 76,
+    "name": "江苏三益航空发展有限公司",
+    "region": "江苏",
+    "description": ""
+  },
+  {
+    "id": 77,
+    "name": "江苏嗨森无人机智能科技有限公司",
+    "region": "江苏",
+    "description": ""
+  },
+  {
+    "id": 78,
+    "name": "南京大翼航空科技有限公司",
+    "region": "江苏",
+    "description": ""
+  },
+  {
+    "id": 79,
+    "name": "南京模幻天空航空科技有限公司",
+    "region": "江苏",
+    "description": ""
+  },
+  {
+    "id": 80,
+    "name": "苏州嗨森无人机科技有限公司",
+    "region": "江苏",
+    "description": ""
+  },
+  {
+    "id": 81,
+    "name": "小天无人机科技（盐城）有限公司",
+    "region": "江苏",
+    "description": ""
+  },
+  {
+    "id": 82,
+    "name": "浙江空时吾智能科技有限公司",
+    "region": "浙江",
+    "description": ""
+  },
+  {
+    "id": 83,
+    "name": "浙江威航智能科技有限公司",
+    "region": "浙江",
+    "description": ""
+  },
+  {
+    "id": 84,
+    "name": "浙江天拓航空科技有限公司",
+    "region": "浙江",
+    "description": ""
+  },
+  {
+    "id": 85,
+    "name": "浙江守正数智空间技术有限公司",
+    "region": "浙江",
+    "description": ""
+  },
+  {
+    "id": 86,
+    "name": "杭州明智时空科技有限公司",
+    "region": "浙江",
+    "description": ""
+  },
+  {
+    "id": 87,
+    "name": "安邦通航智能科技（衢州）有限公司",
+    "region": "浙江",
+    "description": ""
+  },
+  {
+    "id": 88,
+    "name": "嘉兴天旭航空技术有限公司",
+    "region": "浙江",
+    "description": ""
+  },
+  {
+    "id": 89,
+    "name": "杭州时尚科技有限公司",
+    "region": "浙江",
+    "description": ""
+  },
+  {
+    "id": 90,
+    "name": "浙江点创信息科技有限公司",
+    "region": "浙江",
+    "description": ""
+  },
+  {
+    "id": 91,
+    "name": "浙江科比特创新科技有限公司",
+    "region": "浙江",
+    "description": ""
+  },
+  {
+    "id": 92,
+    "name": "安徽北斗智航科技有限公司",
+    "region": "安徽",
+    "description": ""
+  },
+  {
+    "id": 93,
+    "name": "安徽福海电子技术有限公司",
+    "region": "安徽",
+    "description": ""
+  },
+  {
+    "id": 94,
+    "name": "安徽中测空间信息技术有限公司",
+    "region": "安徽",
+    "description": ""
+  },
+  {
+    "id": 95,
+    "name": "福建拓佳天地信息科技有限公司",
+    "region": "福建",
+    "description": ""
+  },
+  {
+    "id": 96,
+    "name": "福建省121地质大队",
+    "region": "福建",
+    "description": ""
+  },
+  {
+    "id": 97,
+    "name": "福建省测绘院",
+    "region": "福建",
+    "description": ""
+  },
+  {
+    "id": 98,
+    "name": "福建福莱航空科技有限公司",
+    "region": "福建",
+    "description": ""
+  },
+  {
+    "id": 99,
+    "name": "硕威工程科技股份有限公司",
+    "region": "福建",
+    "description": ""
+  },
+  {
+    "id": 100,
+    "name": "伟志股份公司",
+    "region": "福建",
+    "description": ""
+  },
+  {
+    "id": 101,
+    "name": "江西省天安泰科技有限公司",
+    "region": "江西",
+    "description": ""
+  },
+  {
+    "id": 102,
+    "name": "江西空中未来科技创新集团有限公司",
+    "region": "江西",
+    "description": ""
+  },
+  {
+    "id": 103,
+    "name": "山东鹰视角智能科技有限公司",
+    "region": "山东",
+    "description": ""
+  },
+  {
+    "id": 104,
+    "name": "东营竹蜻蜓智能科技有限公司",
+    "region": "山东",
+    "description": ""
+  },
+  {
+    "id": 105,
+    "name": "东营市博时智能科技有限责任公司",
+    "region": "山东",
+    "description": ""
+  },
+  {
+    "id": 106,
+    "name": "济南泓特商贸有限公司",
+    "region": "山东",
+    "description": ""
+  },
+  {
+    "id": 107,
+    "name": "济南智航时空地理信息科技有限公司",
+    "region": "山东",
+    "description": ""
+  },
+  {
+    "id": 108,
+    "name": "烟台云都海鹰无人机应用技术有限公司",
+    "region": "山东",
+    "description": ""
+  },
+  {
+    "id": 109,
+    "name": "山东科享云信息科技有限公司",
+    "region": "山东",
+    "description": ""
+  },
+  {
+    "id": 110,
+    "name": "山东省鲁南地质工程勘察院（山东省地勘局第二地质大队）",
+    "region": "山东",
+    "description": ""
+  },
+  {
+    "id": 111,
+    "name": "山东省地质测绘院",
+    "region": "山东",
+    "description": ""
+  },
+  {
+    "id": 112,
+    "name": "河南顺优通实业有限公司",
+    "region": "河南",
+    "description": ""
+  },
+  {
+    "id": 113,
+    "name": "河南省拓普北斗科技有限公司",
+    "region": "河南",
+    "description": ""
+  },
+  {
+    "id": 114,
+    "name": "郑州飞米电子科技有限公司",
+    "region": "河南",
+    "description": ""
+  },
+  {
+    "id": 115,
+    "name": "河南省地质局矿产资源勘查中心",
+    "region": "河南",
+    "description": ""
+  },
+  {
+    "id": 116,
+    "name": "武汉拓普新科无人机科技有限公司",
+    "region": "湖北",
+    "description": ""
+  },
+  {
+    "id": 117,
+    "name": "武汉恒梵科技有限公司",
+    "region": "湖北",
+    "description": ""
+  },
+  {
+    "id": 118,
+    "name": "武汉纵横天地空间信息技术有限公司",
+    "region": "湖北",
+    "description": ""
+  },
+  {
+    "id": 119,
+    "name": "电鹰科技集团有限公司",
+    "region": "湖北",
+    "description": ""
+  },
+  {
+    "id": 120,
+    "name": "武汉九州飞翔科技有限公司",
+    "region": "湖北",
+    "description": ""
+  },
+  {
+    "id": 121,
+    "name": "武汉乐星图科技有限公司",
+    "region": "湖北",
+    "description": ""
+  },
+  {
+    "id": 122,
+    "name": "普宙科技有限公司",
+    "region": "湖北",
+    "description": ""
+  },
+  {
+    "id": 123,
+    "name": "中冶武勘工程技术有限公司",
+    "region": "湖北",
+    "description": ""
+  },
+  {
+    "id": 124,
+    "name": "湖南省自由飞电子科技有限公司",
+    "region": "湖南",
+    "description": ""
+  },
+  {
+    "id": 125,
+    "name": "湖南中电金骏科技集团有限公司",
+    "region": "湖南",
+    "description": ""
+  },
+  {
+    "id": 126,
+    "name": "岳阳云端通讯有限公司",
+    "region": "湖南",
+    "description": ""
+  },
+  {
+    "id": 127,
+    "name": "长沙市岳麓区蓝天应急救援队",
+    "region": "湖南",
+    "description": ""
+  },
+  {
+    "id": 128,
+    "name": "长沙群力测绘科技有限公司",
+    "region": "湖南",
+    "description": ""
+  },
+  {
+    "id": 129,
+    "name": "湖南林科达信息科技有限公司",
+    "region": "湖南",
+    "description": ""
+  },
+  {
+    "id": 130,
+    "name": "湖南省皓宇电子科技有限公司",
+    "region": "湖南",
+    "description": ""
+  },
+  {
+    "id": 131,
+    "name": "广东诚进科技股份有限公司",
+    "region": "广东",
+    "description": ""
+  },
+  {
+    "id": 132,
+    "name": "广东睿旗地理信息技术有限公司",
+    "region": "广东",
+    "description": ""
+  },
+  {
+    "id": 133,
+    "name": "汕头市新飞龙航空科技有限公司",
+    "region": "广东",
+    "description": ""
+  },
+  {
+    "id": 134,
+    "name": "珠海金华威科技数码有限公司",
+    "region": "广东",
+    "description": ""
+  },
+  {
+    "id": 135,
+    "name": "广州市天河区成至无人机应急救援中心",
+    "region": "广东",
+    "description": ""
+  },
+  {
+    "id": 136,
+    "name": "深圳市天空领域实业发展有限公司",
+    "region": "广东",
+    "description": ""
+  },
+  {
+    "id": 137,
+    "name": "深圳市鹏锦科技有限公司",
+    "region": "广东",
+    "description": ""
+  },
+  {
+    "id": 138,
+    "name": "深圳市翼志博科技有限公司",
+    "region": "广东",
+    "description": ""
+  },
+  {
+    "id": 139,
+    "name": "深圳头名科技有限公司",
+    "region": "广东",
+    "description": ""
+  },
+  {
+    "id": 140,
+    "name": "深圳高度创新技术有限公司",
+    "region": "广东",
+    "description": ""
+  },
+  {
+    "id": 141,
+    "name": "深圳市恒唯信科技有限公司",
+    "region": "广东",
+    "description": ""
+  },
+  {
+    "id": 142,
+    "name": "梅州市晟邦科技有限公司",
+    "region": "广东",
+    "description": ""
+  },
+  {
+    "id": 143,
+    "name": "广东省国土资源测绘院",
+    "region": "广东",
+    "description": ""
+  },
+  {
+    "id": 144,
+    "name": "蓝疆创新（深圳）科技有限公司",
+    "region": "广东",
+    "description": ""
+  },
+  {
+    "id": 145,
+    "name": "广西视像通安全技术服务有限公司",
+    "region": "广西",
+    "description": ""
+  },
+  {
+    "id": 146,
+    "name": "广西能飞无人机科技有限公司",
+    "region": "广西",
+    "description": ""
+  },
+  {
+    "id": 147,
+    "name": "广西大雄鹰科技有限公司",
+    "region": "广西",
+    "description": ""
+  },
+  {
+    "id": 148,
+    "name": "海南展飞信息科技有限公司",
+    "region": "海南",
+    "description": ""
+  },
+  {
+    "id": 149,
+    "name": "海南华诚测绘科技有限公司",
+    "region": "海南",
+    "description": ""
+  },
+  {
+    "id": 150,
+    "name": "海南中农航服科技有限公司",
+    "region": "海南",
+    "description": ""
+  },
+  {
+    "id": 151,
+    "name": "海南马斯克科技有限公司",
+    "region": "海南",
+    "description": ""
+  },
+  {
+    "id": 152,
+    "name": "海南星飞帆科技有限公司",
+    "region": "海南",
+    "description": ""
+  },
+  {
+    "id": 153,
+    "name": "重庆同汇勘测规划有限公司",
+    "region": "重庆",
+    "description": ""
+  },
+  {
+    "id": 154,
+    "name": "睿宇时空科技（重庆）股份有限公司",
+    "region": "重庆",
+    "description": ""
+  },
+  {
+    "id": 155,
+    "name": "重庆万航星空信息技术有限公司",
+    "region": "重庆",
+    "description": ""
+  },
+  {
+    "id": 156,
+    "name": "四川测绘地理信息局测绘技术服务中心",
+    "region": "四川",
+    "description": ""
+  },
+  {
+    "id": 157,
+    "name": "四川省第二地质大队",
+    "region": "四川",
+    "description": ""
+  },
+  {
+    "id": 158,
+    "name": "四川携恩数创科技有限责任公司",
+    "region": "四川",
+    "description": ""
+  },
+  {
+    "id": 159,
+    "name": "四川星辰测绘仪器有限公司",
+    "region": "四川",
+    "description": ""
+  },
+  {
+    "id": 160,
+    "name": "四川立巢航空科技有限公司",
+    "region": "四川",
+    "description": ""
+  },
+  {
+    "id": 161,
+    "name": "成都威尔奇空间信息技术有限公司",
+    "region": "四川",
+    "description": ""
+  },
+  {
+    "id": 162,
+    "name": "成都辰宇智航科技有限公司",
+    "region": "四川",
+    "description": ""
+  },
+  {
+    "id": 163,
+    "name": "成都徕拓测绘工程有限公司",
+    "region": "四川",
+    "description": ""
+  },
+  {
+    "id": 164,
+    "name": "自贡市水利电力勘测设计院有限公司",
+    "region": "四川",
+    "description": ""
+  },
+  {
+    "id": 165,
+    "name": "成都特旺科技有限责任公司",
+    "region": "四川",
+    "description": ""
+  },
+  {
+    "id": 166,
+    "name": "成都纵横自动化技术股份有限公司",
+    "region": "四川",
+    "description": ""
+  },
+  {
+    "id": 167,
+    "name": "四川众智鸿图信息科技有限公司",
+    "region": "四川",
+    "description": ""
+  },
+  {
+    "id": 168,
+    "name": "柒零叁信息科技有限公司",
+    "region": "四川",
+    "description": ""
+  },
+  {
+    "id": 169,
+    "name": "贵州天地通科技有限公司",
+    "region": "贵州",
+    "description": ""
+  },
+  {
+    "id": 170,
+    "name": "贵州省有色金属和核工业地质勘查局五总队",
+    "region": "贵州",
+    "description": ""
+  },
+  {
+    "id": 171,
+    "name": "贵州地矿一一三地质工程有限公司",
+    "region": "贵州",
+    "description": ""
+  },
+  {
+    "id": 172,
+    "name": "贵州遥感科技有限公司",
+    "region": "贵州",
+    "description": ""
+  },
+  {
+    "id": 173,
+    "name": "贵州星测科技有限公司",
+    "region": "贵州",
+    "description": ""
+  },
+  {
+    "id": 174,
+    "name": "贵州点云测绘服务有限公司",
+    "region": "贵州",
+    "description": ""
+  },
+  {
+    "id": 175,
+    "name": "贵州鑫疆基业科技有限责任公司",
+    "region": "贵州",
+    "description": ""
+  },
+  {
+    "id": 176,
+    "name": "贵州云图瞰景地理信息技术有限公司",
+    "region": "贵州",
+    "description": ""
+  },
+  {
+    "id": 177,
+    "name": "黔东南富源测绘有限公司",
+    "region": "贵州",
+    "description": ""
+  },
+  {
+    "id": 178,
+    "name": "都匀市南方地理信息科技有限公司",
+    "region": "贵州",
+    "description": ""
+  },
+  {
+    "id": 179,
+    "name": "黔西南州兴源水利电力勘察设计有限公司",
+    "region": "贵州",
+    "description": ""
+  },
+  {
+    "id": 180,
+    "name": "兴义市点云测绘仪器有限公司",
+    "region": "贵州",
+    "description": ""
+  },
+  {
+    "id": 181,
+    "name": "贵州省水利水电勘测设计研究院有限公司",
+    "region": "贵州",
+    "description": ""
+  },
+  {
+    "id": 182,
+    "name": "寸度智慧空间科技（云南）有限公司",
+    "region": "云南",
+    "description": ""
+  },
+  {
+    "id": 183,
+    "name": "云南振蓝信息科技有限公司",
+    "region": "云南",
+    "description": ""
+  },
+  {
+    "id": 184,
+    "name": "云南近达信息技术有限公司",
+    "region": "云南",
+    "description": ""
+  },
+  {
+    "id": 185,
+    "name": "云南省基础测绘技术中心",
+    "region": "云南",
+    "description": ""
+  },
+  {
+    "id": 186,
+    "name": "云南新坐标智能技术有限公司",
+    "region": "云南",
+    "description": ""
+  },
+  {
+    "id": 187,
+    "name": "临沧市水利水电勘测设计研究院有限公司",
+    "region": "云南",
+    "description": ""
+  },
+  {
+    "id": 188,
+    "name": "昆明佳尼潮科技有限公司",
+    "region": "云南",
+    "description": ""
+  },
+  {
+    "id": 189,
+    "name": "西藏大学",
+    "region": "西藏",
+    "description": ""
+  },
+  {
+    "id": 190,
+    "name": "西藏德众地理信息有限公司",
+    "region": "西藏",
+    "description": ""
+  },
+  {
+    "id": 191,
+    "name": "西藏攀索实业有限公司",
+    "region": "西藏",
+    "description": ""
+  },
+  {
+    "id": 192,
+    "name": "蛐蛐（西安）科技有限公司",
+    "region": "陕西",
+    "description": ""
+  },
+  {
+    "id": 193,
+    "name": "陕西凌越航空科技有限公司",
+    "region": "陕西",
+    "description": ""
+  },
+  {
+    "id": 194,
+    "name": "陕西皇朝航空科技有限公司",
+    "region": "陕西",
+    "description": ""
+  },
+  {
+    "id": 195,
+    "name": "陕西星辰时代科技发展有限公司",
+    "region": "陕西",
+    "description": ""
+  },
+  {
+    "id": 196,
+    "name": "西安大地测绘股份有限公司",
+    "region": "陕西",
+    "description": ""
+  },
+  {
+    "id": 197,
+    "name": "甘肃省地质矿产勘查开发局测绘勘查院",
+    "region": "甘肃",
+    "description": ""
+  },
+  {
+    "id": 198,
+    "name": "甘肃煤田地质局庆阳资源勘查院",
+    "region": "甘肃",
+    "description": ""
+  },
+  {
+    "id": 199,
+    "name": "甘肃汇智岚图信息科技有限责任公司",
+    "region": "甘肃",
+    "description": ""
+  },
+  {
+    "id": 200,
+    "name": "甘肃省水利水电勘测设计研究院有限责任公司",
+    "region": "甘肃",
+    "description": ""
+  },
+  {
+    "id": 201,
+    "name": "甘肃苍穹无人机应急救援服务中心",
+    "region": "甘肃",
+    "description": ""
+  },
+  {
+    "id": 202,
+    "name": "甘肃启远智能科技有限责任公司",
+    "region": "甘肃",
+    "description": ""
+  },
+  {
+    "id": 203,
+    "name": "武威市基础地理勘测技术服务中心",
+    "region": "甘肃",
+    "description": ""
+  },
+  {
+    "id": 204,
+    "name": "张掖指南针测绘有限责任公司",
+    "region": "甘肃",
+    "description": ""
+  },
+  {
+    "id": 205,
+    "name": "青海九零六工程勘察设计院有限责任公司",
+    "region": "青海",
+    "description": ""
+  },
+  {
+    "id": 206,
+    "name": "青海智勘科技有限公司",
+    "region": "青海",
+    "description": ""
+  },
+  {
+    "id": 207,
+    "name": "青海众飞电子科技有限公司",
+    "region": "青海",
+    "description": ""
+  },
+  {
+    "id": 208,
+    "name": "青海省自然资源遥感中心",
+    "region": "青海",
+    "description": ""
+  },
+  {
+    "id": 209,
+    "name": "青海省柴达木综合地质矿产勘查院（青海省盐湖地质调查院）",
+    "region": "青海",
+    "description": ""
+  },
+  {
+    "id": 210,
+    "name": "青海省交通规划设计研究院有限公司",
+    "region": "青海",
+    "description": ""
+  },
+  {
+    "id": 211,
+    "name": "青海有色测绘勘察院有限责任公司",
+    "region": "青海",
+    "description": ""
+  },
+  {
+    "id": 212,
+    "name": "中国水利水电第四工程局有限公司",
+    "region": "青海",
+    "description": ""
+  },
+  {
+    "id": 213,
+    "name": "青海华疆电子科技有限公司",
+    "region": "青海",
+    "description": ""
+  },
+  {
+    "id": 214,
+    "name": "青海华谨信息技术有限公司",
+    "region": "青海",
+    "description": ""
+  },
+  {
+    "id": 215,
+    "name": "银川天之源测绘仪器有限公司",
+    "region": "宁夏",
+    "description": ""
+  },
+  {
+    "id": 216,
+    "name": "宁夏隆合科技有限公司",
+    "region": "宁夏",
+    "description": ""
+  },
+  {
+    "id": 217,
+    "name": "宁夏天司创新科技有限公司",
+    "region": "宁夏",
+    "description": ""
+  },
+  {
+    "id": 218,
+    "name": "新疆疆海测绘科技有限公司",
+    "region": "新疆",
+    "description": ""
+  },
+  {
+    "id": 219,
+    "name": "新疆国源测绘规划设计院有限公司",
+    "region": "新疆",
+    "description": ""
+  },
+  {
+    "id": 220,
+    "name": "中国科学院新疆生态与地理研究所",
+    "region": "新疆",
+    "description": ""
+  },
+  {
+    "id": 221,
+    "name": "阿克苏市时代规划设计院有限责任公司",
+    "region": "新疆",
+    "description": ""
+  },
+  {
+    "id": 222,
+    "name": "克拉玛依天地图有限公司",
+    "region": "新疆",
+    "description": ""
+  }
+]
