@@ -38,27 +38,83 @@ const router = useRouter();
 // 响应式数据
 const loading = ref(true);
 const allLists = ref({}); // 存储所有列表数据
+const searchDocs = ref([]);// 存储docx下的所有文档
+const docFolders = ['技术装备前沿', '机制动态', '灾害应急', '招募公告'];
+// 建立中文文件夹名 ↔ list.json key 的映射表
+const folderKeyMap = {
+  '技术装备前沿': 'technology',
+  '机制动态': 'dynamic',
+  '灾害应急': 'disaster',
+  '招募公告': 'notice'
+};
 
 // 从路由参数获取 id
 const listId = computed(() => route.params.id);
 const keyword = computed(() => route.query.keyword || '');
 const isSearchPage = computed(() => listId.value === 'search');
 
-// 当前显示的列表
+// 当前显示的列表（核心修改：去重+字段合并）
 const currentList = computed(() => {
-  if (allLists.value) {
-    // 3.1 搜索页面：根据keyword筛选所有数据中的匹配内容
-    if (isSearchPage.value) {
-      if (!keyword.value) return null; // 无关键词则返回空
-      // 合并所有列表数据，然后筛选包含关键词的项（按需调整筛选规则）
-      const allData = Object.values(allLists.value).flat(); // 把所有列表合并成一维数组
-      return allData.filter(item => {
-        return item.title?.toLowerCase().includes(keyword.value.toLowerCase());
-      });
-    }
-    // 3.2 普通页面：按listId加载指定列表
+  // 1. 普通页面：仍读取原有JSON数据（逻辑不变）
+  if (!isSearchPage.value) {
     return allLists.value[listId.value] || null;
   }
+
+  // 2. 搜索页面：合并list.json条目 + docx文档，去重并优先保留list字段
+  if (isSearchPage.value) {
+    if (!keyword.value) return [];
+    const lowerKeyword = keyword.value.toLowerCase();
+
+    // 步骤1：提取list.json里的notice/dynamic/disaster/technology所有条目
+    // 转为以title为key的映射对象（用于快速匹配去重）
+    const listItemMap = {};
+    Object.values(folderKeyMap).forEach(key => {
+      if (listData[key] && Array.isArray(listData[key])) {
+        listData[key].forEach(item => {
+          if (item.title) { // 过滤空标题
+            // 以title为唯一key，存储list里的完整字段
+            listItemMap[item.title] = {
+              title: item.title,
+              time: item.time || '',
+              url: item.url || '',
+              content: '', // 预留content字段，后续合并docx的内容
+              folder: key // 记录所属分类
+            };
+          }
+        });
+      }
+    });
+
+    // 步骤2：遍历docx文档，合并content字段（去重核心）
+    searchDocs.value.forEach(docItem => {
+      const docTitle = docItem.title;
+      if (listItemMap[docTitle]) {
+        // 若title在list中：合并docx的content字段，保留list的time/url
+        listItemMap[docTitle].content = docItem.content;
+      } else {
+        // 若title不在list中：新增条目，补充空的time/url
+        listItemMap[docTitle] = {
+          title: docTitle,
+          time: '',
+          url: '',
+          content: docItem.content,
+          folder: docItem.folder
+        };
+      }
+    });
+
+    // 步骤3：将映射对象转回数组，完成去重和字段合并
+    const allSearchData = Object.values(listItemMap);
+    console.log('去重合并后的搜索数据源：', allSearchData);
+
+    // 筛选规则：匹配title 或 content（统一规则，覆盖所有条目）
+    return allSearchData.filter(item => {
+      const matchTitle = item.title?.toLowerCase().includes(lowerKeyword);
+      const matchContent = item.content ? item.content.toLowerCase().includes(lowerKeyword) : false;
+      return matchTitle || matchContent;
+    });
+  }
+
   return null;
 });
 
@@ -71,6 +127,7 @@ const pageTitle = computed(() => {
     'disaster': '灾害应急',
     'technology': '技术前沿',
     'dynamic': '机制动态',
+    'notice': '招募公告'
   };
 
   // 如果有直接映射，使用映射的标题
@@ -85,19 +142,78 @@ const pageTitle = computed(() => {
 // 每页显示数量
 const pageSize = ref(10);
 
-// 初始化数据
-const initData = () => {
+// ========== 读取docx文档的函数（仅搜索页面用） ==========
+// 获取指定文件夹下的文档名列表
+const getDocNamesByFolder = async (folderName) => {
+  try {
+    const response = await fetch('/json/docList.json');
+    const docList = await response.json();
+    console.log(`【${folderName}】文件夹配置的文档名：`, docList[folderName]);
+    return docList[folderName] || [];
+  } catch (err) {
+    console.error(`获取${folderName}文档列表失败:`, err);
+    return [];
+  }
+};
+
+// 读取单个文件夹下的所有文档内容
+const loadFolderDocs = async (folderName) => {
+  try {
+    const docNames = await getDocNamesByFolder(folderName);
+    if (docNames.length === 0) {
+      console.warn(`【${folderName}】文件夹下无配置的文档`);
+      return [];
+    }
+    const docs = await Promise.all(
+        docNames.map(async (docName) => {
+          const docPath = `/docx/${folderName}/${docName}.txt`;
+          console.log(`正在读取：${docPath}`);
+          const response = await fetch(docPath);
+          if (!response.ok) throw new Error(`读取${docName}.txt失败，状态码：${response.status}`);
+          const content = await response.text();
+          return {
+            title: docName,
+            content: content,
+            folder: folderName
+          };
+        })
+    );
+    return docs;
+  } catch (err) {
+    console.error(`加载${folderName}文件夹文档失败:`, err);
+    return [];
+  }
+};
+
+// 加载所有docx文件夹的文档（仅搜索页面执行）
+const loadAllSearchDocs = async () => {
+  let allDocs = [];
+  for (const folder of docFolders) {
+    const docs = await loadFolderDocs(folder);
+    allDocs = [...allDocs, ...docs];
+  }
+  searchDocs.value = allDocs;
+  console.log('docx加载的文档：', searchDocs.value);
+};
+
+// ========== 初始化数据（区分普通页面/搜索页面） ==========
+const initData = async () => {
   try {
     loading.value = true;
-    allLists.value = listData;
 
-    // 检查请求的 id 是否存在
-    if (!listData[listId.value]) {
-      console.warn(`列表ID "${listId.value}" 不存在`);
+    // 1. 普通页面：加载原有JSON数据（逻辑完全不变）
+    if (!isSearchPage.value) {
+      allLists.value = listData;
+      if (!listData[listId.value]) {
+        console.warn(`列表ID "${listId.value}" 不存在`);
+      }
     }
-
+    // 2. 搜索页面：加载docx下的文档
+    else {
+      await loadAllSearchDocs();
+    }
   } catch (err) {
-    console.error('加载列表数据失败:', err);
+    console.error('加载数据失败:', err);
   } finally {
     loading.value = false;
   }
@@ -110,17 +226,16 @@ const goBack = () => {
 
 // 监听路由参数变化
 watch(
-    () => route.params.id,
-    (newId) => {
-      if (newId) {
-        initData();
-      }
-    }
+    () => [route.params.id, route.query.keyword],
+    async () => {
+      await initData();
+    },
+    { immediate: false }
 );
 
 // 组件挂载时加载数据
-onMounted(() => {
-  initData();
+onMounted(async () => {
+  await initData();
 });
 </script>
 <style scoped>

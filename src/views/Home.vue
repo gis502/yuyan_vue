@@ -1,6 +1,7 @@
 <template>
   <div class="index">
     <div class="banner">
+      <img class="banner-img" src="@/assets/images/yuyan.png" alt="yuyan" />
       <div class="banner-title">
         <div class="title-line1">雨燕应急</div>
         <div class="title-line2">重大灾害无人机应急合作机制</div>
@@ -53,6 +54,14 @@ import Search from "@//components/Search.vue"
   background: url("@/assets/images/banner1.jpg") center top no-repeat;
   background-size: 100% 100%;
   position: relative;
+}
+
+.banner-img{
+  width: 5%;
+  position: absolute;
+  top: 20px;        /* 可根据需要调整距离顶部的间距 */
+  left: 20px;       /* 可根据需要调整距离左侧的间距 */
+  z-index: 1;
 }
 
 .banner-title {
