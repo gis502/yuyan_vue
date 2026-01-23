@@ -1,5 +1,5 @@
 <template>
-  <NoticeCommon header="机制动态" :content="list?.dynamic?.[0]?.html" />
+  <NoticeCommon header="机制动态" :content="list?.dynamic?.[0]?.html" :href="list?.dynamic?.[0]?.moreInfo" />
 </template>
 
 <script setup>

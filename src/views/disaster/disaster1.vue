@@ -1,5 +1,5 @@
 <template>
-  <NoticeCommon header="灾害应急" :content="list?.disaster?.[0]?.html" />
+  <NoticeCommon header="灾害应急" :content="list?.disaster?.[0]?.html" :href="list?.disaster?.[0]?.moreInfo" />
 </template>
 
 <script setup>

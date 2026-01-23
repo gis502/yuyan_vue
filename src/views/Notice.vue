@@ -1,6 +1,6 @@
 
 <template>
-  <NoticeCommon header="招募公告" :content="List.notice[0].html" />
+  <NoticeCommon header="招募公告" :content="List.notice[0].html" :href="List.notice[0].moreInfo" />
 </template>
 
 <script setup>
