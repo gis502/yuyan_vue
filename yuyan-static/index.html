@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="./css/local-dynamics.css" />
     <link rel="stylesheet" href="./css/technology-frontier.css" />
     <link rel="stylesheet" href="./css/search-team.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
 
     <script src="./js/utils.js"></script>
     <script src="./js/config.js"></script>
@@ -139,6 +140,9 @@
                 </div>
             </div>
         </div>
+
+        <!-- 底部信息 -->
+        <div id="footer_container"></div>
     </div>
 
     <script>
@@ -187,6 +191,9 @@
 
             // 加载团队信息内容
             loadTeamContent();
+
+            // 加载公共组件
+            Utils.insertCommonFooter("footer_container");
         };
     </script>
 </body>
