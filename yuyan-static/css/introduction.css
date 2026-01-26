@@ -1,0 +1,21 @@
+.introduction-container .text {
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(180deg, #edf5ff, #fff 69% 100%);
+  box-shadow: 0 10px 20px #7998c926;
+  border-radius: 8px;
+  border: 2px solid #ffffff;
+  padding: 23px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+.introduction-container .text .text-content {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 2.5em;
+  text-indent: 2em;
+}
