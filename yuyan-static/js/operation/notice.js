@@ -198,9 +198,21 @@ function initSwiper() {
   // 创建切换箭头
   if (swiperConfig.showArrows && !container.querySelector('.swiper-arrows')) {
     const arrowsHtml = `
-      <div class="swiper-arrows">
-        <button class="swiper-button-xuanchuan-prev" aria-label="上一组公告">←</button>
-        <button class="swiper-button-xuanchuan-next" aria-label="下一组公告">→</button>
+     <div class="swiper-arrows">
+        <!-- 上一组箭头：使用指定样式，替换背景图路径为本地./img/prev.png -->
+        <div class="swiper-button-xuanchuan-prev" 
+             style="left:0;width: 50px;height: 70px;background: url(./img/prev.png);position: absolute;margin-top: -100px;z-index: 35;cursor: pointer;" 
+             tabindex="0" 
+             role="button" 
+             aria-label="Previous slide">
+        </div>
+        <!-- 下一组箭头：使用指定样式，替换背景图路径为本地./img/next.png -->
+        <div class="swiper-button-xuanchuan-next" 
+             style="right:0px;width: 50px;height: 70px;background: url(./img/next.png);position: absolute;margin-top: -100px;z-index: 35;cursor: pointer;" 
+             tabindex="0" 
+             role="button" 
+             aria-label="Next slide">
+        </div>
       </div>
     `;
     container.insertAdjacentHTML('beforeend', arrowsHtml);
@@ -335,7 +347,7 @@ function stopAutoplay() {
 // 样式：适配实际HTML结构
 const style = document.createElement('style');
 style.textContent = `
-  .announcement-container {
+   .announcement-container {
     position: relative;
     overflow: hidden;
     width: 100%;
@@ -368,36 +380,11 @@ style.textContent = `
     flex-shrink: 0;
   }
 
-  /* 箭头样式 */
-  .swiper-button-xuanchuan-next,
-  .swiper-button-xuanchuan-prev {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.3);
-    width: 30px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    color: white;
-    border-radius: 5px;
-    border: none;
-    z-index: 10;
-  }
-  
-  .swiper-button-xuanchuan-next {
-    right: 10px;
-  }
-  
-  .swiper-button-xuanchuan-prev {
-    left: 10px;
-  }
-  
-  .swiper-button-xuanchuan-prev:hover, 
-  .swiper-button-xuanchuan-next:hover {
-    background: rgba(0, 0, 0, 0.5);
+  /* 移除原有箭头样式，使用内联样式替代 */
+  .swiper-arrows {
+    position: relative;
+    width: 100%;
+    height: 100%;
   }
 
   /* 分页器样式 */
@@ -474,6 +461,14 @@ style.textContent = `
     .kpzn-list {
       height: 72px;
       font-size: 16px;
+    }
+    /* 响应式下调整箭头样式 */
+    .swiper-button-xuanchuan-prev,
+    .swiper-button-xuanchuan-next {
+      width: 30px !important;
+      height: 40px !important;
+      margin-top: -120px !important;
+      background-size: cover !important;
     }
   }
 `;
