@@ -1,6 +1,6 @@
 const config = {
     // 后台API基地址，如果不为空，则从后台获取相关数据
-    apiBaseUrl: 'http://localhost:7001',
+    apiBaseUrl: null,
 
     // 介绍信息后台地址，此处地址拼接apiBaseUrl，为null则读取/static/introduction.js文件中内容
     introductionUrl: null,
@@ -21,5 +21,5 @@ const config = {
     technologyFrontierUrl: null,
 
     // 队伍信息后台地址，此处地址拼接apiBaseUrl，为null则读取/static/team.js文件中内容
-    teamUrl: '/test/teams'
+    teamUrl: null
 }
