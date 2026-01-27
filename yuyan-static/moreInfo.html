@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="./img/icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>雨燕应急-重大灾害无人机应急合作机制</title>
+    <link rel="stylesheet" href="./css/moreInfo.css">
+    <link rel="stylesheet" href="./css/footer.css" />
+</head>
+<body>
+<!-- 顶部图片展示区 -->
+<header class="moreinfo-header">
+    <img src="./img/head.png" alt="国家减灾中心" class="header-image" />
+</header>
+
+<!-- 内容区域 -->
+<main class="moreinfo-content">
+    <!-- 面包屑导航 -->
+    <div class="breadcrumb-container">
+        <div class="breadcrumb">
+            <a href="./index.html" class="breadcrumb-item">首页</a>
+            <span class="breadcrumb-separator">/</span>
+            <span class="breadcrumb-item current" id="page-title">加载中...</span>
+        </div>
+        <!-- 返回按钮 -->
+        <button class="back-button" id="back-button">
+            <span class="back-icon">←</span> 返回首页
+        </button>
+    </div>
+
+    <!-- 内容展示区 -->
+    <div class="fw content-show">
+        <div class="laws-title">
+            <b></b><span id="laws-title-text">加载中...</span>
+        </div>
+        <ul class="laws-list" id="laws-list">
+            <!-- 列表项将通过JavaScript动态生成 -->
+        </ul>
+
+        <!-- 分页组件 -->
+        <div class="page-container" id="page-container">
+            <div class="page-my m-style" id="pagination">
+                <!-- 分页内容将通过JavaScript动态生成 -->
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- 底部 -->
+<div id="footer_container"></div>
+
+<!-- 2. 配置 -->
+<script src="./js/config.js"></script>
+<script src="./js/utils.js"></script>
+<script src="./js/operation/moreInfo.js"></script>
+</body>
+</html>

@@ -14,7 +14,7 @@ async function loadDynamicsContent() {
       const response = await fetch(Utils.joinApiPath(config.apiBaseUrl, config.dynamicsUrl));
       if (response.ok) {
         const data = await response.json();
-        renderDynamicsList(data.dynamics || data.list || []);
+        renderDynamicsList(data.dynamics || data.list || data || []);
       } else {
         // 如果API请求失败，使用静态文件内容
         renderDynamicsList(dynamicsConfig.dynamics);
