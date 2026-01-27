@@ -14,7 +14,7 @@ async function loadDisasterEmergencyContent() {
       const response = await fetch(Utils.joinApiPath(config.apiBaseUrl, config.disasterEmergencyUrl));
       if (response.ok) {
         const data = await response.json();
-        renderDisasterEmergencyList(data.disasters || data.list || []);
+        renderDisasterEmergencyList(data.disasters || data.list || data || []);
       } else {
         // 如果API请求失败，使用静态文件内容
         renderDisasterEmergencyList(disasterEmergencyConfig.disasters);

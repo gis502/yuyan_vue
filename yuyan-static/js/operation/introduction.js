@@ -9,7 +9,7 @@ async function loadIntroductionContent() {
             const response = await fetch(Utils.joinApiPath(config.apiBaseUrl, config.introductionUrl));
             if (response.ok) {
                 const data = await response.json();
-                textContentElement.innerHTML = data.content || data.description || data.text || '';
+                textContentElement.innerHTML = data.content || data.description || data.text || data || '';
             } else {
                 // 如果API请求失败，使用静态文件内容
                 textContentElement.innerHTML = introductionConfig.content;

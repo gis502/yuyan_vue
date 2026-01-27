@@ -14,7 +14,7 @@ async function loadTechnologyFrontierContent() {
       const response = await fetch(Utils.joinApiPath(config.apiBaseUrl, config.technologyFrontierUrl));
       if (response.ok) {
         const data = await response.json();
-        renderTechnologyFrontierList(data.technologies || data.list || []);
+        renderTechnologyFrontierList(data.technologies || data.list || data || []);
       } else {
         // 如果API请求失败，使用静态文件内容
         renderTechnologyFrontierList(technologyFrontierConfig.technologies);

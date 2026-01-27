@@ -86,13 +86,13 @@ async function loadContentByType(type) {
                 const data = await response.json();
                 let listData = [];
                 if (type === 'dynamic') {
-                    listData = data.dynamics || data.list || [];
+                    listData = data.dynamics || data.list || data || [];
                 } else if (type === 'disaster') {
-                    listData = data.disasters || data.list || [];
+                    listData = data.disasters || data.list || data || [];
                 } else if (type === 'localdynamic') {
-                    listData = data.dynamics || data.list || [];
+                    listData = data.dynamics || data.list || data || [];
                 } else if (type === 'technology') {
-                    listData = data.technologies || data.list || [];
+                    listData = data.technologies || data.list || data || [];
                 }
                 renderContent(listData, type);
             } else {

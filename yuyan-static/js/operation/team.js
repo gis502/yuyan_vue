@@ -14,7 +14,7 @@ async function loadTeamContent() {
       const response = await fetch(Utils.joinApiPath(config.apiBaseUrl, config.teamUrl));
       if (response.ok) {
         const data = await response.json();
-        renderTeamList(data.teams || data.list || [], null);
+        renderTeamList(data.teams || data.list || data || [], null);
       } else {
         // 如果API请求失败，使用静态文件内容
         renderTeamList(teamConfig, null);
