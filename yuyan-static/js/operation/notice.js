@@ -57,7 +57,7 @@ async function loadNoticeContent() {
       const response = await fetch(Utils?.joinApiPath(config.apiBaseUrl, config.noticeUrl) || '');
       if (response.ok) {
         const data = await response.json();
-        renderNoticeList(data.notices || data.list || []);
+        renderNoticeList(data.notices || data.list || data || []);
       } else {
         renderNoticeList(noticeConfig?.notices || []);
       }
