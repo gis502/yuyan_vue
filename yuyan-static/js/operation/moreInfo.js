@@ -13,7 +13,7 @@
 const urlParamMap = {
     'dynamic': 'dynamicsUrl',
     'disaster': 'disasterEmergencyUrl',
-    'local-dynamic': 'localDynamicsUrl',
+    'localdynamic': 'localDynamicsUrl',
     'technology': 'technologyFrontierUrl'
 };
 
@@ -21,7 +21,7 @@ const urlParamMap = {
 const titleMap = {
     'dynamic': '机制动态',
     'disaster': '灾害应急',
-    'local-dynamic': '地方动态',
+    'localdynamic': '地方动态',
     'technology': '技术前沿'
 };
 
@@ -29,7 +29,7 @@ const titleMap = {
 const dataMap = {
     'dynamic': 'window.dynamicsConfig',
     'disaster': 'window.disasterEmergencyConfig',
-    'local-dynamic': 'window.localDynamicsConfig',
+    'localdynamic': 'window.localDynamicsConfig',
     'technology': 'window.technologyFrontierConfig'
 };
 
@@ -37,7 +37,7 @@ const dataMap = {
 const fileMap = {
     'dynamic': './js/static/dynamics.js',
     'disaster': './js/static/disaster-emergency.js',
-    'local-dynamic': './js/static/local-dynamics.js',
+    'localdynamic': './js/static/local-dynamics.js',
     'technology': './js/static/technology-frontier.js'
 };
 
@@ -89,8 +89,8 @@ async function loadContentByType(type) {
                     listData = data.dynamics || data.list || [];
                 } else if (type === 'disaster') {
                     listData = data.disasters || data.list || [];
-                } else if (type === 'local-dynamic') {
-                    listData = data.localDynamics || data.list || [];
+                } else if (type === 'localdynamic') {
+                    listData = data.dynamics || data.list || [];
                 } else if (type === 'technology') {
                     listData = data.technologies || data.list || [];
                 }
@@ -121,8 +121,8 @@ async function loadStaticContent(type) {
             dataList = staticConfig.dynamics || [];
         } else if (type === 'disaster') {
             dataList = staticConfig.disasters || [];
-        } else if (type === 'local-dynamic') {
-            dataList = staticConfig.localDynamics || [];
+        } else if (type === 'localdynamic') {
+            dataList = staticConfig.dynamics || [];
         } else if (type === 'technology') {
             dataList = staticConfig.technologies || [];
         }
